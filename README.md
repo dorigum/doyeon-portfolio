@@ -15,7 +15,7 @@
 
 1. **💻 Interactive Java IDE Mockup Editor**
    - Hero 영역 우측에 맥북 스타일 다크 IDE 창을 구성하여 도연님의 아이덴티티와 핵심 역량을 정의하는 Java 클래스(`DoyeonKoo.java`) 타이핑 효과를 연출했습니다.
-   - 처음부터 모든 코드를 치는 대신 주석과 클래스 뼈대 코드는 **즉시 렌더링(Static Boilerplate)**하고, 핵심 인스턴스 메소드(`pm.setNickname`, `pm.addSkills` 등) 4줄만 **실시간 한 자씩 타이핑(Dynamic Typing)**한 후 무결하게 멈추어 가독성과 몰입감을 조화시켰습니다.
+   - 처음부터 모든 코드를 치는 대신 주석과 클래스 뼈대 코드는 **즉시 렌더링(Static Boilerplate)** 하고, 핵심 인스턴스 메소드(`pm.setNickname`, `pm.addSkills` 등) 4줄만 **실시간 한 자씩 타이핑(Dynamic Typing)** 한 후 무결하게 멈추어 가독성과 몰입감을 조화시켰습니다.
 
 2. **📥 Direct PDF Resume Downloader**
    - 이력서를 서류로 별도 보관하려는 인사담당자(HR)의 편의성을 극대화하기 위해, 메인 헤더의 `PDF 다운로드` 버튼 클릭 시 unmasked 원본 자격증 등록번호가 기재된 **제출용 2페이지 PDF 요약본 이력서**를 단번에 획득할 수 있도록 내장했습니다.
