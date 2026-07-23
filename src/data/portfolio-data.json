@@ -1,0 +1,246 @@
+{
+  "profile": {
+    "name": "구도연 (Doyeon Koo) 🐻‍❄️",
+    "title": "다재다능한 제너럴리스트 PM & Full-Stack Developer",
+    "email": "kkamang03@gmail.com",
+    "github": "https://github.com/dorigum",
+    "mbti": "ISFJ",
+    "major": "경영정보학 / 산업공학 전공",
+    "description": "하고 싶은 것도, 좋아하는 것도 많은 다재다능 제너럴리스트 PM을 꿈꾸고 있어요. 사용자의 흐름을 먼저 생각하고, 직접 만들고 고치고 배포하면서 배운 것을 차곡차곡 기록합니다 🚀",
+    "learningHabit": "매일 배운 기술과 에러 해결 과정을 Obsidian Vault에 구조화하여 정리하고, 일일 커밋(YYMMDD 컨벤션)을 통해 성장의 발자취를 기록하는 견고한 학습 루틴을 실천하고 있습니다."
+  },
+  "skills": {
+    "backend": ["Java", "Spring", "Spring Boot", "Spring Security", "JPA", "Node.js", "Express", "REST API", "JWT", "OAuth2", "Flyway"],
+    "database": ["MySQL", "Redis", "PostgreSQL", "Oracle", "pgvector", "Firebase Realtime DB"],
+    "frontend": ["JavaScript", "React", "Vite", "React Router", "Zustand", "TanStack Query", "Axios", "CSS (Glassmorphism)", "Tailwind CSS", "SCSS"],
+    "devops": ["Git", "GitHub Actions", "Docker", "Docker Compose", "AWS (EC2, S3, CloudFront, Route53)", "Prometheus", "Grafana", "Nginx", "Swagger", "Jenkins", "JUnit5", "Testcontainers"],
+    "ai_data": ["Spring AI", "Gemini API", "AWS Bedrock", "OCR", "Python", "Pandas", "RAG"],
+    "collaboration": ["Notion", "Discord", "Obsidian"]
+  },
+  "studyLog": {
+    "backend": [
+      "Java 기본 문법, 객체지향, 예외 처리, 컬렉션, 파일 처리",
+      "JDBC와 SQL 기반 데이터 접근 흐름",
+      "Servlet / JSP / MVC 구조 이해",
+      "Spring MVC 기반 CRUD, Ajax, 게시판 기능 구현",
+      "Spring Boot 프로젝트 구조, Controller-Service-Repository 계층 설계",
+      "JPA, 연관관계 매핑, 트랜잭션, QueryDSL 실습",
+      "Spring Security, JWT, OAuth2, 권한 처리, Swagger API 문서화"
+    ],
+    "frontend": [
+      "HTML, CSS, JavaScript 기본기",
+      "React, Vite, React Router 기반 프론트엔드 구조 이해",
+      "Context, Redux, Zustand 상태 관리 실습",
+      "TanStack Query 기반 서버 상태 관리 실습",
+      "사용자 흐름을 고려한 화면 이동, 이력 관리, 리포트 UI, 마이페이지 구성"
+    ],
+    "devops": [
+      "Git / GitHub 커밋, 브랜치, 원격 저장소 관리",
+      "Docker 이미지, Dockerfile, Docker Compose 실습",
+      "GitHub Actions 기반 CI/CD workflow 작성",
+      "AWS EC2, RDS, S3, CloudFront, Route53, ALB, ACM HTTPS 배포 흐름 학습",
+      "Prometheus, Grafana, CloudWatch 기반 모니터링 학습",
+      "Terraform 기반 IaC 기본 실습"
+    ],
+    "ai_data": [
+      "Python, NumPy, Pandas 기초 실습",
+      "Spring AI, AWS Bedrock Claude, Gemini API, OCR, RAG, pgvector 활용 경험"
+    ]
+  },
+  "certifications": [
+    {
+      "title": "정보처리기사",
+      "issuer": "한국산업인력공단",
+      "date": "2022.06.17",
+      "serial": "22201100825X"
+    },
+    {
+      "title": "ADsP(데이터분석준전문가)",
+      "issuer": "한국데이터산업진흥원",
+      "date": "2021.04.09",
+      "serial": "ADsP-028000376"
+    },
+    {
+      "title": "SQLD(SQL 개발자)",
+      "issuer": "한국데이터산업진흥원",
+      "date": "2020.06.30",
+      "serial": "SQLD-0370138"
+    },
+    {
+      "title": "GTQ그래픽기술자격 1급 (포토샵)",
+      "issuer": "한국생산성본부",
+      "date": "2015.02.13",
+      "serial": "GA01G15101275925"
+    },
+    {
+      "title": "CS Leaders(관리사)",
+      "issuer": "한국정보평가협회",
+      "date": "2016.10.18",
+      "serial": "160060284C"
+    }
+  ],
+  "learningTopics": [
+    {
+      "topic": "Java & Spring Ecosystem",
+      "desc": "객체지향 설계 원칙(SOLID)의 실천, Spring AOP, MVC 아키텍처 및 Spring Boot 3.5 기반 마이크로서비스 설계"
+    },
+    {
+      "topic": "Security & Authentication",
+      "desc": "Spring Security 필터 체인 커스터마이징, JWT 기반 Silent Refresh 토큰 체계, Redis 블랙리스트 로그아웃 보완"
+    },
+    {
+      "topic": "Database Modeling & ORM",
+      "desc": "JPA 영속성 컨텍스트 동작 원리 분석, 테이블 연관관계 매핑 및 동시성 처리를 위한 비관적/낙관적 락(Lock) 실습"
+    },
+    {
+      "topic": "DevOps & Infrastructure",
+      "desc": "Docker 컨테이너 오케스트레이션, GitHub Actions 기반 CI/CD 자동화 파이프라인 구성, AWS HTTPS 보안 웹 서비스 구축"
+    },
+    {
+      "topic": "AI Application & Data RAG",
+      "desc": "Spring AI 라이브러리 기반 프롬프트 엔지니어링, pgvector 벡터 데이터베이스 연동 및 RAG 검색 모델 구축"
+    }
+  ],
+  "featuredProjects": [
+    {
+      "id": "zipt",
+      "title": "ZIPT (전세사기 방지 플랫폼)",
+      "period": "04_Final Project",
+      "subtitle": "등기부등본 분석, 계약서 검토, 보증보험 조건 확인, 동네 인프라 브리핑 통합 서비스",
+      "links": {
+        "repo": "https://github.com/dorigum/Final_ZIPT_Project"
+      },
+      "techStack": ["React 19", "Spring Boot 3.5", "JPA", "MySQL", "Redis", "pgvector", "AWS EC2/S3/CloudFront", "Spring AI"],
+      "contributions": [
+        "전월세 계약 전후의 사용자 흐름 기준 홈, 분석, 계약서, 지도, 마이페이지 전체 UI 구조 설계 및 개발",
+        "등기부등본 및 계약서 분석 이력과 상세 AI 리포트를 React Query (TanStack Query) 기반 상태 관리 최적화",
+        "Zustand를 활용한 인증 상태 관리, Silent Refresh 토큰 갱신 및 OAuth 소셜 로그인 리디렉션 흐름 안정화",
+        "Kakao 지도 API 연동을 통한 동네 인프라 탐색 환경 구성 및 LLM(Spring AI) 기반 인프라 요약 브리핑 구현",
+        "전체 라우트 페이지에 React.lazy 지연 로딩 코드 스플리팅을 전면 이식하여 초기 JS 메인 번들 크기를 73.7% 감축(1,243KB -> 327KB)하고 LCP(초기화면 렌더링) 성능 대폭 개선",
+        "Vite 빌드타임 플러그인(vite-imagetools)을 적용해 디스플레이 크기에 맞춘 리사이즈 및 WebP 자동 변환을 적용하여 이미지 파일 용량 99.6% 극적 감소(280~370KB -> 1.1~1.5KB)",
+        "백엔드 병목을 분산하기 위해 브라우저 단에서 Kakao 지도 API로 수집한 주변 실시간 POI 목록을 바탕으로 구글 AI SDK(Gemini API)를 직접 호출하도록 구현하고, 5단계 모델 fallback(discoverModel) 파이프라인을 구축해 API 호환성 100% 확보",
+        "재빌드 배포 없이 S3에 업로드된 JSON 파일의 동적 Upsert 교체만으로 앱 내 용어사전 및 가이드 문구가 실시간 갱신되는 관리 효율성 극대화 구조 설계"
+      ],
+      "troubleshooting": [
+        "<b>[수학적 할루시네이션 극복]</b> AI(LLM)에게 서류 분석 연산을 직접 맡겼을 때 발생하는 수학적 할루시네이션(연산 오차)을 방지하기 위해, AI는 OCR 데이터 추출(파싱)만 전담하고 부채비율 계산은 백엔드 수학 연산 코드로 처리하는 2단계 파이프라인 아키텍처 설계로 <b>연산 할루시네이션 발생률 0% 달성</b>"
+      ],
+      "learnings": [
+        "사용자는 기능의 복잡도보다 '현재 내가 프로세스 중 어디에 있고 다음에 무엇을 해야 하는지' 직관적인 UX 흐름을 먼저 인지한다는 것을 배움",
+        "백엔드 비동기 분석 결과를 대기하는 화면에서 로딩, 성공, 실패 등의 다양한 에지 케이스 상태를 부드러운 트랜지션으로 렌더링 설계함"
+      ]
+    },
+    {
+      "id": "codemate",
+      "title": "CodeMate (개발자 스터디 매칭 API)",
+      "period": "03_Backend Project",
+      "subtitle": "스터디 및 모각코(모여서 각자 코딩) 모집, 신청, 승인/거절 상태 관리 및 동시성 제어 Spring Boot 백엔드",
+      "links": {
+        "repo": "https://github.com/dorigum/3_CodeMate_Project"
+      },
+      "techStack": ["Java 17", "Spring Boot", "Spring Security", "JPA", "MySQL", "Flyway", "Docker", "GitHub Actions", "Testcontainers"],
+      "contributions": [
+        "스터디 참여 신청 및 방장의 승인/거절 워크플로우 비즈니스 로직 및 상태 흐름 설계",
+        "Refresh Token Rotation (RTR), SHA-256 단방향 해싱, JWT Blacklist(Redis) 기반으로 세션 보안성 극대화",
+        "다중 조건 필터링(키워드, 카테고리, 모집 상태, 지역, 기술 스택)을 조합한 커스텀 동적 쿼리 및 페이징 구현",
+        "Testcontainers를 도입하여 실제 MySQL 환경과 100% 일치하는 통합 테스트 환경을 CI/CD 파이프라인에 이식"
+      ],
+      "troubleshooting": [
+        "<b>[동시성 마감 제어]</b> 정원 마감 직전의 동시성 제어를 위해 <b>비관적 락(Pessimistic Lock)</b>을 적용하여 정원 초과 및 데이터 레이스 컨디션 상황에서의 무결성을 지키고, 통합 테스트를 통해 데이터 무결성 100% 검증 완수"
+      ],
+      "learnings": [
+        "단순한 CRUD API 개발이라도 복합적인 비즈니스 상태 전이 흐름에서는 데이터 정합성과 동시성 제어가 핵심이라는 것을 배움",
+        "인증/인가는 로그인 처리뿐만 아니라 토큰 탈취 방지(RTR), 블랙리스트를 통한 완벽한 로그아웃 흐름까지 설계해야 안전하다는 점을 인지"
+      ]
+    },
+    {
+      "id": "codetrip",
+      "title": "CodeTrip (여행 큐레이션 서비스)",
+      "period": "02_Frontend Project",
+      "subtitle": "공공 여행 데이터, 실시간 날씨 추천, 위시리스트 및 메모 연동형 큐레이션 서비스",
+      "links": {
+        "repo": "https://github.com/dorigum/2_CodeTrip_Project",
+        "service": "https://dorigum-codetrip.web.app/"
+      },
+      "techStack": ["React", "Vite", "Zustand", "Express", "MySQL", "Firebase Authentication", "Realtime Database", "Firebase Hosting"],
+      "contributions": [
+        "2인 AWS 기반 배포 프로젝트를 공모전 제출을 목적으로 Firebase Auth / Realtime DB / Hosting 기반 정적 단일 환경으로 리팩토링",
+        "폴더 기반 위시리스트, 실시간 체크리스트 및 개별 메모 관리를 위한 Realtime DB 테이블 정규화 및 CRUD 구현",
+        "Kakao Map API 동적 로딩, 최근 본 여행지 로깅 및 가로 스크롤 카드 UX 개선",
+        "Open-Meteo 실시간 기상 API 및 역지오코딩 Nominatim API를 활용하여 유저 관심 지역별 즉흥 여행지 슬롯머신 추천 흐름 구축"
+      ],
+      "troubleshooting": [
+        "<b>[대용량 호출 지연 99.5% 개선]</b> 한국관광공사 KTO API 대용량 데이터(약 60,000건) 조회 시 발생하는 API 호출 제한(429) 및 긴 대기시간(평균 2.0s) 문제를 해결하기 위해 서버 사이드 인메모리 캐싱 도입. 클라이언트 기준 외부 API 호출 횟수를 0회로 차단하고 데이터 응답 속도를 기존 약 2,000ms에서 10ms 미만으로 <b>약 99.5%의 속도 대폭 개선</b>",
+        "<b>[체감 속도 0ms 구현]</b> 여행지 댓글 및 좋아요 액션에 <b>낙관적 업데이트(Optimistic Update)</b>를 적용하여 네트워크 상태와 무관하게 사용자 체감 반응 속도 0ms 구현"
+      ],
+      "learnings": [
+        "로컬, AWS, Firebase 호스팅 등 아키텍처 환경에 맞춰 성능 및 통신 오버헤드를 고려한 유연한 포팅(Porting) 능력을 키움",
+        "기능의 수보다 사용자가 장소를 고르고, 위시리스트를 분류하고, 체크리스트로 일정을 짜는 E2E 사용자 여정(User Journey)을 설계하는 중요성을 깨달음"
+      ]
+    },
+    {
+      "id": "cafekiosk",
+      "title": "Cafe Kiosk (콘솔 기반 관리/주문 키오스크)",
+      "period": "01_Java Project",
+      "subtitle": "MVC 패턴 및 Layered Architecture 기반 콘솔 카페 키오스크 시스템",
+      "links": {
+        "repo": "https://github.com/dorigum/1_Cafe_kiosk_Project"
+      },
+      "techStack": ["Java 18", "MySQL 8.0", "JDBC"],
+      "contributions": [
+        "MVC(Model-View-Controller-Service-Repository) Layered Architecture를 충실히 적용하여 콘솔 기반 회원 로그인/결제 기능 개발",
+        "회원/비회원별 구매액 포인트 적립 및 차감 트랜잭션 관리와 포인트 변동 이력(PointHistory) 추적성 확보",
+        "카테고리별 디폴트 옵션 매핑 및 개별 메뉴 옵션 오버라이딩(HOT/ICE, 사이즈, 휘핑 등) 예외 처리 로직 구현",
+        "매출 통계 분석 기능(시간대별 피크타임, 요일별 매출 비중, VVIP 분석) 고도화 및 UTF-8 CSV 리포트 내보내기 구현",
+        "민감한 DB 접속 정보를 dbInfo.properties 파일로 분리하고 .gitignore에 등록하여 초기 보안성 강화 습관 수립"
+      ],
+      "learnings": [
+        "화면이 없는 콘솔 기반 개발이더라도 백엔드 아키텍처(Layered)를 단단하게 잡으면 UI 레이어만 얹어서 웹으로 확장 가능한 구조적 유연성을 배움",
+        "DB 모델링(ERD 설계)이 기능 구현의 나침반이 된다는 것을 1차 프로젝트를 통해 명확히 실감"
+      ]
+    }
+  ],
+  "timeline": [
+    {
+      "category": "KOSTA",
+      "title": "AI를 활용한 Java 기반 DevOps 개발자 양성 수료",
+      "date": "2026.02.02 ~ 2026.07.10",
+      "description": "한국소프트웨어기술진흥협회(KOSTA) 주관. Java 및 Spring Boot 백엔드 기반 설계, MSA 구조 구축, Docker 컨테이너 오케스트레이션 및 AWS DevOps 배포 자동화 파이프라인 심화 과정 수료."
+    },
+    {
+      "category": "글로벌아카데미",
+      "title": "LowCode 기반 AI융합 스마트관리시스템 개발 심화과정",
+      "date": "2025.01.14 ~ 2025.03.17",
+      "description": "총 320시간 이수. 응용SW엔지니어링(직무코드 20010202) 기반 스마트 엔지니어링 프로젝트를 위해 AI를 융합한 로우코드 스마트 업무 자동화 및 관리 시스템 설계 및 개발 역량 학습."
+    },
+    {
+      "category": "멀티캠퍼스",
+      "title": "온·오프 연계 AI 활용 지능형 서비스 개발 과정",
+      "date": "2021.03.08 ~ 2021.06.17",
+      "description": "삼성 멀티캠퍼스 K-Digital 교육. Java, SQL, Python, JSP 기본 실습 및 웹 페이지 세미 프로젝트 수행. KT 기가지니 기반의 지능형 서비스 실습 및 Naver AI Platform을 활용해 Spring 아키텍처 기반의식단/운동 헬스케어 공유 플랫폼 구축 팀 프로젝트 수행."
+    },
+    {
+      "category": "대학교",
+      "title": "2019 복지서비스 모델제안 컴페티션",
+      "date": "2019.09.02 ~ 2019.12.05",
+      "description": "공과 대학 학술제 졸업 연구 프로젝트. 'Eye Tracker를 이용한 학교 홈페이지 사용성 개선방안'을 기획 및 분석하여 시선 흐름 패턴을 반영한 개선 웹 프로토타입 최종 도출."
+    },
+    {
+      "category": "한이음 ICT 멘토링",
+      "title": "공공데이터 취업정보 제공 챗봇 앱 개발",
+      "date": "2019.04.22 ~ 2019.11.30",
+      "description": "멘토링 프로젝트 팀장 역임. 공공데이터포털 채용 API를 실시간 연동한 취업정보 추천 챗봇 시스템을 기획하고 팀원들을 리드하여 안드로이드 네이티브 앱 환경 구축 성공."
+    },
+    {
+      "category": "대학교",
+      "title": "2018 학술 경진 대회",
+      "date": "2018.09.10 ~ 2018.11.30",
+      "description": "학부 학술제 프로젝트 팀장 역임. '지하철 역사 내 이용 동선 및 시간 단축 개선방안'을 주제로, Arena 시뮬레이션 프로그램을 설계하여 동선 데이터를 과학적으로 분석하고 최종 구조 개선안 도출."
+    },
+    {
+      "category": "월드프렌즈 코리아",
+      "title": "월드프렌즈 ICT 봉사단",
+      "date": "2018.07.08 ~ 2018.08.05",
+      "description": "과학기술정보통신부 주관 해외 ICT 봉사단 파견. IT 총괄 PM으로서 라오스 현지 교육기관 전용 안드로이드 애플리케이션 기획 및 설계를 전담하여 120시간 동안 보급 프로젝트를 완수."
+    }
+  ]
+}

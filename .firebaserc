@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "newagent-9c2a8"
+  },
+  "targets": {
+    "newagent-9c2a8": {
+      "hosting": {
+        "portfolio": [
+          "doyeon-portfolio"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
