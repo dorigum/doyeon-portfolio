@@ -1,12 +1,12 @@
 {
   "projects": {
-    "default": "newagent-9c2a8"
+    "default": "doyeon-portfolio-web"
   },
   "targets": {
-    "newagent-9c2a8": {
+    "doyeon-portfolio-web": {
       "hosting": {
         "portfolio": [
-          "doyeon-portfolio"
+          "doyeon-dev-portfolio"
         ]
       }
     }

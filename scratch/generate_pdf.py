@@ -199,7 +199,7 @@ story.append(Paragraph("• <b>[성능 최적화] React.lazy 코드 스플리팅
 story.append(Paragraph("• <b>[성능 최적화] 빌드타임 WebP 이미지 압축</b>: <code>vite-imagetools</code>를 도입하여 리소스 이미지를 표시 크기에 맞추어 리사이즈하고 WebP 포맷으로 변환을 자동화해 <b>용량 99.6% 극적 단축(280~370KB -> 1.1~1.5KB)</b>.", bullet_style))
 story.append(Paragraph("• <b>[아키텍처] 브라우저 직송 Gemini AI 설계</b>: 백엔드 경유 오버헤드를 해소하기 위해 클라이언트단에서 카카오맵 API로 수집한 POI 정보를 Google AI SDK(Gemini API)로 직접 호출하게 설계. API 키 노출 트레이드오프를 감수하고 5단계 모델 fallback(discoverModel)을 구축해 안정성을 높임.", bullet_style))
 story.append(Paragraph("• <b>[운영 효율성] S3 JSON 콘텐츠 동기화</b>: 앱 재빌드/배포 없이 S3에 업로드된 JSON 파일 교체(Upsert 패턴)만으로 운영 중인 부동산 가이드북과 용어사전 문구가 즉각 동기화되도록 결합 구조 설계.", bullet_style))
-story.append(Paragraph("• <b>[트러블슈팅] AI 연산 할루시네이션 극복</b>: AI(LLM) 서류 분석 시 발생하는 수학적 할루시네이션(연산 오차)을 차단하기 위해, AI는 OCR 데이터 파싱만 전담하고 부채비율 계산은 백엔드 수학 연산 코드로 처리하는 2단계 파이프라인 아키텍처를 도입하여 <b>연산 오차율 0% 달성</b>.", bullet_style))
+story.append(Paragraph("• <b>[트러블슈팅] AI 브리핑 비동기 동기화</b>: 주소 변경 직후 카카오맵 POI 조회가 끝나기 전에 Gemini API가 빈 데이터로 조기 호출되어 이전 지역 브리핑이 노출되는 race condition을 분석. 검색 시 이전 POI를 초기화하고 <code>lastFetchedKey</code>로 POI 로딩 완료 이후에만 AI를 호출하도록 동기화했으며, 데이터에 없는 지역을 추측하지 않도록 프롬프트 가드레일을 추가해 검색 주소와 실시간 인프라 브리핑을 1:1로 일치시킴.", bullet_style))
 story.append(Spacer(1, 5))
 
 # 프로젝트 2: CodeTrip
@@ -212,7 +212,7 @@ story.append(Spacer(1, 5))
 # 프로젝트 3: CodeMate
 story.append(Paragraph("<b>3. CodeMate (개발자 스터디 매칭 API)</b> | 3_Backend Project", project_title_style))
 story.append(Paragraph("<i>기능 요약: 스터디 및 모각코 모집/신청/참여 상태 흐름 제어, Refresh Token Rotation 보안 API</i>", normal_style))
-story.append(Paragraph("• <b>[신뢰성] 동시성 마감 제어</b>: 마감 인원 직전의 동시 신청 상황에서 race condition으로 발생하는 정원 초과 오류를 차단하기 위해 <b>JPA 비관적 락(Pessimistic Lock)</b>을 도입하고, 동시 요청 통합 테스트에서 정원 초과 및 데이터 무결성 오류 0건 확인.", bullet_style))
+story.append(Paragraph("• <b>[신뢰성] 동시성 마감 제어</b>: 마감 인원 직전의 동시 신청 상황에서 race condition으로 발생하는 정원 초과 오류를 차단하기 위해 <b>JPA 비관적 락(Pessimistic Lock)</b>을 도입하고, 동시 요청 통합 테스트로 정원 초과 방지와 데이터 무결성을 검증.", bullet_style))
 story.append(Spacer(1, 8))
 
 # 4. 학력 및 주요 교육/대외활동 (Education & Experience)
