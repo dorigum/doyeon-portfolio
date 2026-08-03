@@ -120,7 +120,7 @@ link_box_data = [
         Paragraph(
             "🚀 <b>인터랙티브 포트폴리오 안내</b><br/>"
             "동봉된 <b>[구도연_포트폴리오.html]</b> 파일을 실행하시거나 온라인 링크를 통해 실시간 웹 버전을 조작하실 수 있습니다.<br/>"
-            "웹 포트폴리오: <font color='#2563eb'><u>https://doyeon-portfolio.web.app</u></font> | 이메일: kkamang03@gmail.com",
+            "웹 포트폴리오: <font color='#2563eb'><u>https://doyeon-dev-portfolio.web.app</u></font> | 이메일: kkamang03@gmail.com",
             ParagraphStyle('LinkBox', parent=normal_style, fontSize=9.5, leading=15, textColor=colors.HexColor("#1e3a8a"))
         )
     ]

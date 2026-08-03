@@ -1,13 +1,13 @@
 # 🐻‍❄️ 구도연 (Doyeon Koo) - Interactive Web Portfolio
 
-[![Firebase Hosting](https://img.shields.io/badge/Deploy-Firebase_Hosting-FFCA28?style=flat-art&logo=firebase&logoColor=white)](https://doyeon-portfolio.web.app)
+[![Firebase Hosting](https://img.shields.io/badge/Deploy-Firebase_Hosting-FFCA28?style=flat-art&logo=firebase&logoColor=white)](https://doyeon-dev-portfolio.web.app)
 [![Vite](https://img.shields.io/badge/Build-Vite_8.1.5-646CFF?style=flat-art&logo=vite&logoColor=white)](https://vite.dev)
 [![React](https://img.shields.io/badge/Framework-React_19-61DAFB?style=flat-art&logo=react&logoColor=black)](https://react.dev)
 
 다재다능한 **제너럴리스트 PM & Full-Stack Developer 구도연**의 개인 포트폴리오 웹사이트 소스 코드 및 산출물 통합 저장소입니다.  
 실시간 동작하는 반응형 웹 포트폴리오는 아래 링크에서 조작 및 확인하실 수 있습니다.
 
-👉 **[실시간 웹 포트폴리오 바로가기](https://doyeon-portfolio.web.app/)**
+👉 **[실시간 웹 포트폴리오 바로가기](https://doyeon-dev-portfolio.web.app/)**
 
 ---
 
