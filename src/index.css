@@ -114,7 +114,7 @@ body {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 40px;
 }
 
 .section-title {
@@ -531,12 +531,6 @@ header {
   overflow: hidden;
 }
 
-@media (min-width: 900px) {
-  .project-card {
-    flex-direction: row;
-  }
-}
-
 .project-card::before {
   content: '';
   position: absolute;
@@ -547,15 +541,33 @@ header {
   background: linear-gradient(to bottom, var(--glow-blue), var(--glow-purple));
 }
 
-.project-info {
-  flex: 3;
+.project-header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  width: 100%;
+  border-bottom: 1px dashed rgba(15, 23, 42, 0.05);
+  padding-bottom: 16px;
+}
+
+@media (max-width: 900px) {
+  .project-header-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+}
+
+.project-title-area {
+  flex: 1;
 }
 
 .project-meta {
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 
 .project-period {
@@ -570,21 +582,35 @@ header {
   font-weight: 700;
   font-family: 'Outfit', 'Noto Sans KR', sans-serif;
   color: var(--text-primary);
-  margin-bottom: 8px;
+  margin-bottom: 4px;
 }
 
 .project-subtitle {
   font-size: 1rem;
   color: var(--text-secondary);
-  margin-bottom: 24px;
+  margin-bottom: 0;
   font-style: italic;
+}
+
+.project-actions-horizontal {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 8px;
+}
+
+@media (min-width: 901px) {
+  .project-actions-horizontal {
+    margin-top: 0;
+  }
 }
 
 .project-tech {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-bottom: 24px;
+  margin-bottom: 12px;
 }
 
 .tech-tag {
@@ -654,24 +680,21 @@ header {
   color: var(--glow-purple);
 }
 
-.project-actions {
-  flex: 1;
+.project-actions-horizontal {
   display: flex;
-  flex-direction: column;
-  gap: 12px;
-  justify-content: flex-start;
-  align-items: stretch;
-  min-width: 180px;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .project-btn {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  padding: 12px;
+  gap: 6px;
+  padding: 8px 14px;
   border-radius: 8px;
-  font-size: 0.9rem;
+  font-size: 0.82rem;
   font-weight: 600;
   text-decoration: none;
   transition: all 0.2s;
@@ -679,6 +702,7 @@ header {
   border: 1px solid rgba(15, 23, 42, 0.1);
   color: var(--text-primary);
   box-shadow: 0 2px 6px var(--glass-shadow);
+  white-space: nowrap;
 }
 
 .project-btn:hover {
