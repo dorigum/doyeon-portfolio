@@ -903,9 +903,14 @@ footer {
 
 @media (max-width: 768px) {
   .container {
-    padding: 0 28px !important;
+    padding: 0 clamp(28px, 7vw, 44px) !important;
     width: 100% !important;
     box-sizing: border-box !important;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr !important;
+    gap: 22px !important;
   }
 
   .skills-card, .cert-card-standalone {
@@ -1243,4 +1248,17 @@ footer {
   top: -1px;
   color: var(--glow-purple);
   font-weight: bold;
+}
+@media (max-width: 900px) {
+  .container {
+    padding-left: clamp(32px, 7vw, 56px) !important;
+    padding-right: clamp(32px, 7vw, 56px) !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr !important;
+    gap: 22px !important;
+  }
 }
