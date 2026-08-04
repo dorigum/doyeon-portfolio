@@ -451,7 +451,7 @@ function App() {
                   )}
                   {project.links.repo_team && (
                     <a href={project.links.repo_team} target="_blank" rel="noopener noreferrer" className="project-btn">
-                      GitHub (2인 AWS 팀)
+                      GitHub (2인 프로젝트)
                     </a>
                   )}
                   {project.links.repo_firebase && (
@@ -485,7 +485,7 @@ function App() {
                   <h4>💡 담당 업무 및 구현 기여점</h4>
                   <ul>
                     {project.contributions.map((item, index) => (
-                      <li key={index}>{item}</li>
+                      <li key={index} dangerouslySetInnerHTML={{ __html: item }}></li>
                     ))}
                   </ul>
                 </div>
@@ -505,7 +505,7 @@ function App() {
                   <h4>🧠 프로젝트 성과 및 배운 점</h4>
                   <ul>
                     {project.learnings.map((item, index) => (
-                      <li key={index}>{item}</li>
+                      <li key={index} dangerouslySetInnerHTML={{ __html: item }}></li>
                     ))}
                   </ul>
                 </div>

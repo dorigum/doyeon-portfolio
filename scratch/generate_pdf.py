@@ -211,7 +211,7 @@ story.append(Paragraph("• <b>[트러블슈팅] AI 브리핑 비동기 동기�
 story.append(Spacer(1, 4))
 
 # 프로젝트 3: CodeTrip
-story.append(Paragraph("<b>3. CodeTrip (여행 큐레이션 서비스)</b> | 2026.04.20 ~ 2026.04.29", project_title_style))
+story.append(Paragraph("<b>3. CodeTrip (여행 큐레이션 서비스)</b> | 2026.04.20 ~ 2026.04.29 / 2026.07.20 ~ 진행중", project_title_style))
 story.append(Paragraph("<i>기능 요약: 공공 여행 데이터, 실시간 기상 API 연동 추천, 위시리스트 폴더 관리 및 메모장 공유</i>", normal_style))
 story.append(Paragraph("• <b>[Part 1: 2인 AWS 팀 프로젝트]</b>", bold_style))
 story.append(Paragraph("  - AWS EC2/RDS 인프라 기반의 2인 협업 아키텍처 및 Kakao Map API 연동 뷰 구성.", bullet_style))

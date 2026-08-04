@@ -184,7 +184,7 @@
     {
       "id": "codetrip",
       "title": "CodeTrip (여행 큐레이션 서비스)",
-      "period": "2026.04.20 ~ 2026.04.29",
+      "period": "2026.04.20 ~ 2026.04.29 / 2026.07.20 ~ 진행중",
       "subtitle": "공공 여행 데이터, 실시간 날씨 추천, 위시리스트 및 메모 연동형 큐레이션 서비스",
       "links": {
         "repo_team": "https://github.com/dorigum/2_CodeTrip_Project",
