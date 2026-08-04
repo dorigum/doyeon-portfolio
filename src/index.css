@@ -903,9 +903,13 @@ footer {
 
 @media (max-width: 768px) {
   .container {
-    padding: 0 20px !important;
+    padding: 0 28px !important;
     width: 100% !important;
     box-sizing: border-box !important;
+  }
+
+  .skills-card, .cert-card-standalone {
+    padding: 20px 18px !important;
   }
 
   .section-spacing {
