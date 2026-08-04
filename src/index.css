@@ -114,7 +114,7 @@ body {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 0 60px;
 }
 
 .section-title {
@@ -839,6 +839,50 @@ footer {
 }
 
 /* Responsive fixes */
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 45px !important;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    text-align: center;
+  }
+
+  .hero-content {
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-code-panel {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hero-name {
+    font-size: 2.6rem;
+    line-height: 1.3;
+    margin-bottom: 16px;
+  }
+  
+  .hero-title {
+    font-size: 1.35rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  
+  .hero-desc {
+    font-size: 0.95rem;
+    line-height: 1.65;
+    margin-bottom: 28px;
+    padding: 0 12px;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 @media (max-width: 768px) {
   .container {
     padding: 0 20px !important;
@@ -861,22 +905,6 @@ footer {
   .hero-section {
     padding-top: 100px;
     padding-bottom: 40px;
-  }
-
-  .hero-grid {
-    grid-template-columns: 1fr;
-    gap: 32px;
-    text-align: center;
-  }
-
-  .hero-content {
-    align-items: center;
-    text-align: center;
-  }
-
-  .hero-code-panel {
-    width: 100%;
-    max-width: 100%;
   }
 
   .mbti-badge {
