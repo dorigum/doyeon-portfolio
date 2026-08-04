@@ -228,7 +228,7 @@ story.append(Paragraph("Education & Experience", section_title_style))
 edu_data = [
     [Paragraph("<b>글로벌아카데미</b>", bold_style), Paragraph("LowCode 기반 AI융합 스마트관리시스템 개발 심화과정 (2025.01.14 ~ 2025.03.17)", normal_style)],
     [Paragraph("<b>KOSTA</b>", bold_style), Paragraph("AI를 활용한 Java 기반 DevOps 개발자 양성 과정 수료 (2026.02.02 ~ 2026.07.10)", normal_style)],
-    [Paragraph("<b>멀티캠퍼스</b>", bold_style), Paragraph("삼성 멀티캠퍼스: AI 퍼스널 트레이너(식단/운동 헬스케어 공유 플랫폼) (2021.05.14 ~ 2021.06.17)", normal_style)],
+    [Paragraph("<b>멀티캠퍼스</b>", bold_style), Paragraph("K-Digital 온·오프 연계 AI 활용 지능형 서비스 개발 과정 (2021.03.08 ~ 2021.06.17)", normal_style)],
     [Paragraph("<b>대학교</b>", bold_style), Paragraph("2019 복지서비스 모델제안 컴페티션 (공과 대학 학술제 졸업 연구) (2019.09.02 ~ 2019.12.05)", normal_style)],
     [Paragraph("<b>한이음 ICT 멘토링</b>", bold_style), Paragraph("공공데이터 이용 취업정보 추천 챗봇 앱 개발 - 팀장 역임 (2019.04.22 ~ 2019.11.30)", normal_style)],
     [Paragraph("<b>대학교</b>", bold_style), Paragraph("2018 학술 경진 대회 (지하철 동선 시뮬레이션 분석) - 팀장 역임 (2018.09.10 ~ 2018.11.30)", normal_style)],
