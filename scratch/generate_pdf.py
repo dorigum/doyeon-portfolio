@@ -213,8 +213,13 @@ story.append(Spacer(1, 4))
 # 프로젝트 3: CodeTrip
 story.append(Paragraph("<b>3. CodeTrip (여행 큐레이션 서비스)</b> | 2026.04.20 ~ 2026.04.29", project_title_style))
 story.append(Paragraph("<i>기능 요약: 공공 여행 데이터, 실시간 기상 API 연동 추천, 위시리스트 폴더 관리 및 메모장 공유</i>", normal_style))
-story.append(Paragraph("• <b>[성능 최적화] 서버 사이드 인메모리 캐싱 도입</b>: 공공 API(한국관광공사 KTO) 6만 건 데이터 조회 시 발생하는 429 API 호출 제한 및 지연 속도(2s)를 극복하기 위해 서버에 데이터를 인메모리 캐싱. 클라이언트 기준 외부 API 호출 <b>0회</b>로 차단하고 데이터 응답 시간을 <b>기존 2,000ms에서 10ms 미만으로 약 99.5%의 속도 대폭 개선</b>.", bullet_style))
-story.append(Paragraph("• <b>[UX 최적화] 낙관적 업데이트</b>: 댓글 등록 및 좋아요 액션 시 서버 응답 지연에 영향받지 않도록 <code>useMutation</code>의 <code>onMutate</code>를 활용해 <b>체감 반응 속도 0ms</b> 구현 및 롤백 기능 탑재.", bullet_style))
+story.append(Paragraph("• <b>[Part 1: 2인 AWS 팀 프로젝트]</b>", bold_style))
+story.append(Paragraph("  - AWS EC2/RDS 인프라 기반의 2인 협업 아키텍처 및 Kakao Map API 연동 뷰 구성.", bullet_style))
+story.append(Paragraph("  - Open-Meteo API 및 Nominatim API 조합 즉흥 여행지 슬롯머신 추천 로직 구현.", bullet_style))
+story.append(Paragraph("• <b>[Part 2: 1인 Firebase Serverless 포팅]</b>", bold_style))
+story.append(Paragraph("  - 인프라 비용 절감 및 배포 단순화를 위해 **Express/MySQL 구성을 Firebase Auth/Realtime DB 정적 서버리스 환경으로 1인 전면 리팩토링**.", bullet_style))
+story.append(Paragraph("  - <b>[호출 지연 99.5% 개선]</b> 공공 KTO API 6만 건 데이터에 대해 서버사이드 인메모리 캐싱을 설계하여 외부 호출을 차단하고 응답 시간을 **2.0s에서 10ms 미만으로 약 99.5% 대폭 단축**.", bullet_style))
+story.append(Paragraph("  - <b>[체감 속도 0ms]</b> 댓글/좋아요에 **낙관적 업데이트(Optimistic Update)** 및 롤백 도입으로 속도 제로화 구현.", bullet_style))
 story.append(Spacer(1, 4))
 
 # 프로젝트 4: CodeMate

@@ -449,6 +449,16 @@ function App() {
                       GitHub 저장소
                     </a>
                   )}
+                  {project.links.repo_team && (
+                    <a href={project.links.repo_team} target="_blank" rel="noopener noreferrer" className="project-btn">
+                      GitHub (2인 AWS 팀)
+                    </a>
+                  )}
+                  {project.links.repo_firebase && (
+                    <a href={project.links.repo_firebase} target="_blank" rel="noopener noreferrer" className="project-btn">
+                      GitHub (1인 Firebase)
+                    </a>
+                  )}
                   {project.links.frontend && (
                     <a href={project.links.frontend} target="_blank" rel="noopener noreferrer" className="project-btn">
                       Frontend Code
