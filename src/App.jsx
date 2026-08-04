@@ -270,7 +270,7 @@ function App() {
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="container" style={{ padding: '80px 0' }}>
+      <section id="skills" className="container section-spacing">
         <h2 className="section-title">Tech Stack</h2>
         <div className="skills-grid">
           <div className="glass-card skills-card reveal-on-scroll">
@@ -325,9 +325,9 @@ function App() {
       </section>
 
       {/* Learning & Habits Section */}
-      <section id="habits" className="container" style={{ padding: '80px 0' }}>
+      <section id="habits" className="container section-spacing">
         <h2 className="section-title">Continuous Learning & Habits</h2>
-        <div className="glass-card habits-container reveal-on-scroll" style={{ padding: '40px', marginBottom: '40px' }}>
+        <div className="glass-card habits-container reveal-on-scroll habits-padding">
           <div className="habit-header">
             <span className="habit-icon">📝</span>
             <div className="habit-meta">
@@ -393,7 +393,7 @@ function App() {
       </section>
 
       {/* Licenses & Certifications Section (Separated to the bottom) */}
-      <section id="certifications" className="container" style={{ padding: '80px 0' }}>
+      <section id="certifications" className="container section-spacing">
         <h2 className="section-title">Licenses & Certifications</h2>
         <div className="certs-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '20px' }}>
           {certifications.map((cert, index) => (
@@ -418,7 +418,7 @@ function App() {
       </section>
 
       {/* Featured Projects Section */}
-      <section id="projects" className="container" style={{ padding: '80px 0' }}>
+      <section id="projects" className="container section-spacing">
         <h2 className="section-title">Featured Projects</h2>
         <div className="projects-grid">
           {featuredProjects.map((project) => (
@@ -506,7 +506,7 @@ function App() {
       </section>
 
       {/* Experience / Timeline Section */}
-      <section id="timeline" className="container" style={{ padding: '80px 0' }}>
+      <section id="timeline" className="container section-spacing">
         <h2 className="section-title">Experience & Projects Archive</h2>
         <div className="timeline-container">
           <div className="timeline-line"></div>
