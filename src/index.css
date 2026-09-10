@@ -400,10 +400,17 @@ header {
 
 .social-links {
   display: flex;
-  gap: 24px;
+  gap: 20px;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+}
+
+.hero-action-btns {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  justify-content: center;
 }
 
 .email-text-link {
@@ -955,13 +962,16 @@ header {
 footer {
   border-top: none;
   background: transparent;
-  padding: 48px 0 32px;
+  padding: 24px 0 16px;
   text-align: center;
 }
 
 .footer-text {
-  font-size: 0.88rem;
+  font-size: 0.85rem;
   color: var(--text-muted);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.5;
 }
 
 .footer-heart {
@@ -1048,7 +1058,7 @@ footer {
 
 @media (max-width: 768px) {
   .container {
-    padding: 0 28px !important;
+    padding: 0 32px !important;
     width: 100% !important;
     box-sizing: border-box !important;
   }
@@ -1066,7 +1076,7 @@ footer {
   }
 
   .section-spacing {
-    padding: 40px 0 !important;
+    padding: 56px 0 !important;
   }
 
   .section-title {
@@ -1101,29 +1111,41 @@ footer {
   }
   
   .hero-desc {
-    font-size: 0.88rem;
-    line-height: 1.65;
+    font-size: 0.9rem;
+    line-height: 1.7;
     margin-bottom: 24px;
-    padding: 0 6px;
+    padding: 0 4px;
     word-break: keep-all;
   }
 
   .social-links {
     flex-direction: column;
     align-items: center;
-    gap: 12px;
+    gap: 14px;
     width: 100%;
-    margin-top: 8px;
+    margin-top: 6px;
   }
 
-  .social-btn {
-    width: 100%;
-    max-width: 270px;
-    padding: 11px 20px;
-    font-size: 0.88rem;
-    justify-content: center;
-    white-space: nowrap;
-    box-sizing: border-box;
+  .hero-action-btns {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 10px !important;
+    width: 100% !important;
+    max-width: 360px !important;
+  }
+
+  .hero-action-btns .social-btn {
+    flex: 1 1 0 !important;
+    width: auto !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    padding: 11px 12px !important;
+    font-size: 0.84rem !important;
+    justify-content: center !important;
+    white-space: nowrap !important;
+    box-sizing: border-box !important;
   }
 
   .email-text-link {
@@ -1398,25 +1420,36 @@ footer {
     transform: translateY(-2px) scale(1.15);
   }
 
+  /* Footer on mobile */
+  footer {
+    padding: 14px 0 8px !important;
+  }
+
+  .footer-text {
+    padding: 0 64px !important;
+    font-size: 0.78rem !important;
+    line-height: 1.45 !important;
+  }
+
   /* Back to top button on mobile */
   .back-to-top {
-    bottom: calc(82px + env(safe-area-inset-bottom, 0px)) !important;
-    right: 16px !important;
-    width: 42px !important;
-    height: 42px !important;
-    font-size: 1.2rem !important;
+    bottom: calc(78px + env(safe-area-inset-bottom, 0px)) !important;
+    right: 14px !important;
+    width: 38px !important;
+    height: 38px !important;
+    font-size: 1.1rem !important;
     box-shadow: 0 4px 12px rgba(59, 130, 246, 0.25);
   }
 
   body {
-    padding-bottom: calc(86px + env(safe-area-inset-bottom, 0px));
+    padding-bottom: calc(84px + env(safe-area-inset-bottom, 0px));
   }
 }
 
 /* Small Smartphone Optimization (<= 480px) */
 @media (max-width: 480px) {
   .container {
-    padding: 0 24px !important;
+    padding: 0 28px !important;
   }
 
   .nav-container {
@@ -1442,7 +1475,18 @@ footer {
 
   .hero-desc {
     font-size: 0.85rem;
+    line-height: 1.65;
     padding: 0 2px;
+  }
+
+  .hero-action-btns {
+    gap: 8px !important;
+  }
+
+  .hero-action-btns .social-btn {
+    padding: 10px 8px !important;
+    font-size: 0.8rem !important;
+    gap: 6px !important;
   }
 
   .mockup-editor {
@@ -1463,13 +1507,8 @@ footer {
     font-size: 0.64rem;
   }
 
-  .social-btn {
-    max-width: 100%;
-    width: 100%;
-  }
-
   .project-card {
-    padding: 20px 16px !important;
+    padding: 22px 18px !important;
   }
 
   .project-title {
@@ -1482,12 +1521,17 @@ footer {
   }
 
   .timeline-content {
-    padding: 18px 16px !important;
+    padding: 20px 18px !important;
   }
 
   .mobile-nav {
     width: calc(100% - 16px);
     height: 56px;
+  }
+
+  .footer-text {
+    padding: 0 54px !important;
+    font-size: 0.75rem !important;
   }
 }
 
