@@ -553,7 +553,7 @@ function App() {
       <footer>
         <div className="container">
           <p className="footer-text">
-            <span className="footer-line">© 2026 Doyeon (Polar bear 빼꼼🐻❄️)</span>
+            <span className="footer-line">© 2026 Doyeon (Polar bear 빼꼼🐻‍❄️)</span>
             <span className="footer-line">Built with <span className="footer-heart">♥</span> using React & Vite. All rights reserved.</span>
           </p>
         </div>
