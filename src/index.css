@@ -514,6 +514,9 @@ header {
 .habits-container {
   padding: 40px;
   margin-bottom: 0;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Habits Section */
@@ -674,6 +677,9 @@ header {
   grid-template-columns: 1fr;
   gap: 40px;
   margin-bottom: 0;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .project-card {
@@ -880,7 +886,7 @@ header {
 /* Timeline Section */
 .timeline-container {
   position: relative;
-  max-width: 800px;
+  max-width: 960px;
   margin: 0 auto;
   padding-left: 32px;
 }
@@ -894,9 +900,17 @@ header {
   background: linear-gradient(to bottom, var(--glow-purple), var(--bg-primary) 95%);
 }
 
+#timeline {
+  padding-bottom: 24px !important;
+}
+
 .timeline-item {
   position: relative;
   margin-bottom: 48px;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0 !important;
 }
 
 .timeline-dot {
@@ -962,7 +976,7 @@ header {
 footer {
   border-top: none;
   background: transparent;
-  padding: 24px 0 16px;
+  padding: 8px 0 48px;
   text-align: center;
 }
 
@@ -1058,7 +1072,7 @@ footer {
 
 @media (max-width: 768px) {
   .container {
-    padding: 0 32px !important;
+    padding: 0 24px !important;
     width: 100% !important;
     box-sizing: border-box !important;
   }
@@ -1329,6 +1343,10 @@ footer {
   }
 
   /* Timeline */
+  #timeline {
+    padding-bottom: 20px !important;
+  }
+
   .timeline-container {
     padding-left: 20px !important;
     padding-right: 0 !important;
@@ -1348,9 +1366,13 @@ footer {
   }
 
   .timeline-item {
-    margin-bottom: 28px !important;
+    margin-bottom: 24px !important;
     width: 100% !important;
     box-sizing: border-box !important;
+  }
+
+  .timeline-item:last-child {
+    margin-bottom: 0 !important;
   }
 
   .timeline-content {
@@ -1422,7 +1444,7 @@ footer {
 
   /* Footer on mobile */
   footer {
-    padding: 14px 0 8px !important;
+    padding: 6px 0 calc(40px + env(safe-area-inset-bottom, 0px)) !important;
   }
 
   .footer-text {
@@ -1449,7 +1471,7 @@ footer {
 /* Small Smartphone Optimization (<= 480px) */
 @media (max-width: 480px) {
   .container {
-    padding: 0 28px !important;
+    padding: 0 22px !important;
   }
 
   .nav-container {
