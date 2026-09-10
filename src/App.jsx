@@ -443,46 +443,47 @@ function App() {
                   <div className="project-meta">
                     <span className="project-period">{project.period}</span>
                   </div>
-                  <h3 className="project-title">{project.title}</h3>
+                  <div className="project-title-row">
+                    <h3 className="project-title">{project.title}</h3>
+                    <div className="project-actions-horizontal">
+                      {project.links.service && (
+                        <a href={project.links.service} target="_blank" rel="noopener noreferrer" className="project-btn accent">
+                          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                          </svg>
+                          Live Demo
+                        </a>
+                      )}
+                      {project.links.repo && (
+                        <a href={project.links.repo} target="_blank" rel="noopener noreferrer" className="project-btn">
+                          GitHub 저장소
+                        </a>
+                      )}
+                      {project.links.repo_team && (
+                        <a href={project.links.repo_team} target="_blank" rel="noopener noreferrer" className="project-btn">
+                          GitHub (2인 프로젝트)
+                        </a>
+                      )}
+                      {project.links.repo_firebase && (
+                        <a href={project.links.repo_firebase} target="_blank" rel="noopener noreferrer" className="project-btn">
+                          GitHub (1인 Firebase)
+                        </a>
+                      )}
+                      {project.links.frontend && (
+                        <a href={project.links.frontend} target="_blank" rel="noopener noreferrer" className="project-btn">
+                          Frontend Code
+                        </a>
+                      )}
+                      {project.links.backend && (
+                        <a href={project.links.backend} target="_blank" rel="noopener noreferrer" className="project-btn">
+                          Backend Code
+                        </a>
+                      )}
+                    </div>
+                  </div>
                   <p className="project-subtitle">{project.subtitle}</p>
-                </div>
-                
-                <div className="project-actions-horizontal">
-                  {project.links.service && (
-                    <a href={project.links.service} target="_blank" rel="noopener noreferrer" className="project-btn accent">
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                        <polyline points="15 3 21 3 21 9"></polyline>
-                        <line x1="10" y1="14" x2="21" y2="3"></line>
-                      </svg>
-                      Live Demo
-                    </a>
-                  )}
-                  {project.links.repo && (
-                    <a href={project.links.repo} target="_blank" rel="noopener noreferrer" className="project-btn">
-                      GitHub 저장소
-                    </a>
-                  )}
-                  {project.links.repo_team && (
-                    <a href={project.links.repo_team} target="_blank" rel="noopener noreferrer" className="project-btn">
-                      GitHub (2인 프로젝트)
-                    </a>
-                  )}
-                  {project.links.repo_firebase && (
-                    <a href={project.links.repo_firebase} target="_blank" rel="noopener noreferrer" className="project-btn">
-                      GitHub (1인 Firebase)
-                    </a>
-                  )}
-                  {project.links.frontend && (
-                    <a href={project.links.frontend} target="_blank" rel="noopener noreferrer" className="project-btn">
-                      Frontend Code
-                    </a>
-                  )}
-                  {project.links.backend && (
-                    <a href={project.links.backend} target="_blank" rel="noopener noreferrer" className="project-btn">
-                      Backend Code
-                    </a>
-                  )}
                 </div>
               </div>
 

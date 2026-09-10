@@ -725,25 +725,13 @@ header {
 }
 
 .project-header-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 24px;
   width: 100%;
   border-bottom: 1px dashed rgba(15, 23, 42, 0.05);
   padding-bottom: 16px;
 }
 
-@media (max-width: 900px) {
-  .project-header-container {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 16px;
-  }
-}
-
 .project-title-area {
-  flex: 1;
+  width: 100%;
 }
 
 .project-meta {
@@ -761,23 +749,47 @@ header {
   letter-spacing: 0.02em;
 }
 
+.project-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
 .project-title {
   font-size: 1.85rem;
   font-weight: 700;
   font-family: 'Outfit', 'Noto Sans KR', sans-serif;
   color: var(--text-primary);
-  margin-bottom: 8px;
+  margin-bottom: 0;
   letter-spacing: -0.01em;
 }
 
 .project-subtitle {
   font-size: 1.02rem;
   color: var(--text-secondary);
-  margin-bottom: 6px;
+  margin-bottom: 4px;
   font-style: italic;
   line-height: 1.7;
   letter-spacing: -0.01em;
   word-break: keep-all;
+  white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+  .project-title-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .project-subtitle {
+    white-space: normal !important;
+    font-size: 0.92rem !important;
+    line-height: 1.6 !important;
+  }
 }
 
 .project-actions-horizontal {
