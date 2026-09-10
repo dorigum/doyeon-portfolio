@@ -953,15 +953,15 @@ header {
 
 /* Footer */
 footer {
-  border-top: 1px solid var(--glass-border);
-  background: var(--bg-secondary);
-  padding: 40px 0;
+  border-top: none;
+  background: transparent;
+  padding: 48px 0 32px;
   text-align: center;
 }
 
 .footer-text {
-  font-size: 0.9rem;
-  color: var(--text-secondary);
+  font-size: 0.88rem;
+  color: var(--text-muted);
 }
 
 .footer-heart {
@@ -1048,7 +1048,7 @@ footer {
 
 @media (max-width: 768px) {
   .container {
-    padding: 0 20px !important;
+    padding: 0 28px !important;
     width: 100% !important;
     box-sizing: border-box !important;
   }
@@ -1304,26 +1304,33 @@ footer {
 
   /* Timeline */
   .timeline-container {
-    padding-left: 24px !important;
+    padding-left: 20px !important;
+    padding-right: 0 !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
   }
 
   .timeline-line {
-    left: 6px !important;
+    left: 4px !important;
   }
 
   .timeline-dot {
-    left: -24px !important;
+    left: -20px !important;
     width: 12px !important;
     height: 12px !important;
-    top: 4px !important;
+    top: 6px !important;
   }
 
   .timeline-item {
-    margin-bottom: 32px !important;
+    margin-bottom: 28px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
   }
 
   .timeline-content {
-    padding: 18px 14px !important;
+    padding: 20px 18px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
   }
 
   .timeline-title {
@@ -1405,7 +1412,7 @@ footer {
 /* Small Smartphone Optimization (<= 480px) */
 @media (max-width: 480px) {
   .container {
-    padding: 0 14px !important;
+    padding: 0 24px !important;
   }
 
   .hero-name {
@@ -1445,7 +1452,7 @@ footer {
   }
 
   .project-card {
-    padding: 18px 12px !important;
+    padding: 20px 16px !important;
   }
 
   .project-title {
@@ -1455,6 +1462,10 @@ footer {
   .project-btn {
     padding: 6px 9px !important;
     font-size: 0.74rem !important;
+  }
+
+  .timeline-content {
+    padding: 18px 16px !important;
   }
 
   .mobile-nav {
