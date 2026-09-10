@@ -120,11 +120,14 @@ body {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 60px;
+  padding-left: 60px;
+  padding-right: 60px;
+  box-sizing: border-box;
 }
 
 .section-spacing {
-  padding: 80px 0;
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 
 .section-title {
@@ -230,7 +233,7 @@ header {
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
   gap: 40px;
-  align-items: center;
+  align-items: flex-end;
 }
 
 .hero-content {
@@ -243,7 +246,7 @@ header {
 .hero-code-panel {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   width: 100%;
 }
 
@@ -390,12 +393,25 @@ header {
 }
 
 .hero-desc {
-  max-width: 650px;
+  max-width: 760px;
   color: var(--text-secondary);
-  font-size: 1.1rem;
-  line-height: 1.7;
-  margin-bottom: 40px;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 36px;
   word-break: keep-all;
+}
+
+.hero-desc-line {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.hero-desc-line:last-child {
+  margin-bottom: 0;
+}
+
+.mobile-only-br {
+  display: none;
 }
 
 .social-links {
@@ -1014,11 +1030,13 @@ footer {
 /* Responsive System: Tablet & Mobile */
 @media (max-width: 1024px) {
   .container {
-    padding: 0 36px !important;
+    padding-left: 36px !important;
+    padding-right: 36px !important;
   }
 
   .section-spacing {
-    padding: 60px 0 !important;
+    padding-top: 60px !important;
+    padding-bottom: 60px !important;
   }
 
   .hero-section {
@@ -1078,7 +1096,8 @@ footer {
 
 @media (max-width: 768px) {
   .container {
-    padding: 0 24px !important;
+    padding-left: 24px !important;
+    padding-right: 24px !important;
     width: 100% !important;
     box-sizing: border-box !important;
   }
@@ -1096,7 +1115,8 @@ footer {
   }
 
   .section-spacing {
-    padding: 56px 0 !important;
+    padding-top: 52px !important;
+    padding-bottom: 52px !important;
   }
 
   .section-title {
@@ -1136,6 +1156,14 @@ footer {
     margin-bottom: 24px;
     padding: 0 4px;
     word-break: keep-all;
+  }
+
+  .mobile-only-br {
+    display: inline !important;
+  }
+
+  .hero-desc-line {
+    margin-bottom: 4px !important;
   }
 
   .social-links {
@@ -1485,7 +1513,13 @@ footer {
 /* Small Smartphone Optimization (<= 480px) */
 @media (max-width: 480px) {
   .container {
-    padding: 0 22px !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  .section-spacing {
+    padding-top: 44px !important;
+    padding-bottom: 44px !important;
   }
 
   .nav-container {

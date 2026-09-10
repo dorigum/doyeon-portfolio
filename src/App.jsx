@@ -230,10 +230,14 @@ function App() {
               다재다능한 <span className="gradient-text-anim">제너럴리스트 PM</span> & <span className="gradient-text-anim">Full-Stack Developer</span>
             </h2>
             <p className="hero-desc">
-              하고 싶은 것도, 좋아하는 것도 많은<br />
-              <span className="gradient-text-anim">다재다능 제너럴리스트 PM</span>을 꿈꾸고 있어요.<br />
-              <span className="gradient-text-anim">사용자의 흐름</span>을 먼저 생각하고, 직접 만들고 고치고 배포하면서<br />
-              배운 것을 차곡차곡 기록합니다 🚀
+              <span className="hero-desc-line">
+                하고 싶은 것도, 좋아하는 것도 많은<br className="mobile-only-br" />{' '}
+                <span className="gradient-text-anim">다재다능 제너럴리스트 PM</span>을 꿈꾸고 있어요.
+              </span>
+              <span className="hero-desc-line">
+                <span className="gradient-text-anim">사용자의 흐름</span>을 먼저 생각하고, 직접 만들고 고치고 배포하면서<br className="mobile-only-br" />{' '}
+                배운 것을 차곡차곡 기록합니다 🚀
+              </span>
             </p>
             <div className="social-links">
               <div className="hero-action-btns">
