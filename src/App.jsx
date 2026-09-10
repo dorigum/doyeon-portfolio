@@ -64,36 +64,42 @@ function App() {
         );
       }
 
-      // 2. Dynamic lines: render dynamically based on typing progress
-      const lineProgress = Math.max(0, typeProgress - dynamicCharCounter);
+      // 2. Dynamic lines: render based on typing progress without collapsing line slots
       const prevCounter = dynamicCharCounter;
+      const lineProgress = Math.max(0, typeProgress - prevCounter);
       dynamicCharCounter += line.text.length;
 
-      if (lineProgress <= 0 && typeProgress < prevCounter) {
-        return null;
-      }
+      const isLineStarted = typeProgress >= prevCounter;
+      const isLineActive = isLineStarted && typeProgress < dynamicCharCounter;
+      const isLastDynamicLine = lineIdx === 7;
+      const isFinished = typeProgress >= totalLength;
 
       let renderedLength = 0;
       return (
         <div key={lineIdx} className="code-line">
           <span className="line-num">{lineIdx + 1}</span>
           <span className="line-content">
-            {line.tokens.map((token, tokIdx) => {
-              const tokenProgress = Math.max(0, lineProgress - renderedLength);
-              renderedLength += token.text.length;
+            {isLineStarted ? (
+              line.tokens.map((token, tokIdx) => {
+                const tokenProgress = Math.max(0, lineProgress - renderedLength);
+                renderedLength += token.text.length;
 
-              if (tokenProgress <= 0) return null;
-              
-              const textToRender = token.text.substring(0, tokenProgress);
-              return (
-                <span key={tokIdx} style={{ color: token.color }}>
-                  {textToRender}
-                </span>
-              );
-            })}
-            {typeProgress >= prevCounter && typeProgress < dynamicCharCounter && (
-              <span className="code-cursor">|</span>
+                if (tokenProgress <= 0) return null;
+                
+                const textToRender = token.text.substring(0, tokenProgress);
+                return (
+                  <span key={tokIdx} style={{ color: token.color }}>
+                    {textToRender}
+                  </span>
+                );
+              })
+            ) : (
+              // Empty placeholder space so the line preserves height and doesn't shift
+              <span className="empty-line-placeholder">&nbsp;</span>
             )}
+            {/* Show blinking cursor on the currently active typing line, or at end when done */}
+            {isLineActive && <span className="code-cursor">|</span>}
+            {isLastDynamicLine && isFinished && <span className="code-cursor">|</span>}
           </span>
         </div>
       );
@@ -336,13 +342,13 @@ function App() {
             </div>
           </div>
           
-          <div className="topics-grid" style={{ marginTop: '30px', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '20px' }}>
+          <div className="topics-grid">
             {learningTopics.map((topic, index) => (
-              <div key={index} className="topic-card" style={{ background: 'rgba(255,255,255,0.02)', padding: '20px', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.05)' }}>
-                <h4 style={{ color: 'var(--glow-blue)', fontFamily: 'var(--font-mono)', fontSize: '1rem', marginBottom: '8px' }}>
+              <div key={index} className="topic-card">
+                <h4 className="topic-card-title">
                   &gt; {topic.topic}
                 </h4>
-                <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', lineHeight: '1.5' }}>
+                <p className="topic-card-desc">
                   {topic.desc}
                 </p>
               </div>
@@ -350,9 +356,9 @@ function App() {
           </div>
 
           {/* Detailed 2026 Study Log */}
-          <div className="study-log-section" style={{ marginTop: '50px', borderTop: '1px solid var(--glass-border)', paddingTop: '40px' }}>
-            <h3 style={{ fontSize: '1.25rem', fontWeight: '700', marginBottom: '24px', display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--text-primary)' }}>
-              <span style={{ color: 'var(--glow-blue)' }}>🌱</span> 2026 Study Log (Obsidian Vault 데이터 동기화)
+          <div className="study-log-section">
+            <h3 className="study-log-title">
+              <span className="study-log-emoji">🌱</span> 2026 Study Log (Obsidian Vault 데이터 동기화)
             </h3>
             <div className="study-log-grid">
               <div className="study-log-card">
@@ -395,21 +401,21 @@ function App() {
       {/* Licenses & Certifications Section (Separated to the bottom) */}
       <section id="certifications" className="container section-spacing">
         <h2 className="section-title">Licenses & Certifications</h2>
-        <div className="certs-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '20px' }}>
+        <div className="certs-grid">
           {certifications.map((cert, index) => (
-            <div key={index} className="glass-card cert-card-standalone reveal-on-scroll" style={{ padding: '24px', borderLeft: '3px solid var(--glow-purple)', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', gap: '12px' }}>
-              <div>
-                <h3 style={{ fontSize: '1.05rem', fontWeight: '700', color: 'var(--text-primary)', marginBottom: '4px' }}>{cert.title}</h3>
-                <span style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>{cert.issuer}</span>
+            <div key={index} className="glass-card cert-card-standalone reveal-on-scroll">
+              <div className="cert-card-header">
+                <h3 className="cert-card-title">{cert.title}</h3>
+                <span className="cert-card-issuer">{cert.issuer}</span>
               </div>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '2px', fontSize: '0.75rem', color: 'var(--text-muted)', borderTop: '1px solid rgba(15,23,42,0.04)', paddingTop: '8px' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+              <div className="cert-card-meta">
+                <div className="cert-card-row">
                   <span>취득일자:</span>
-                  <span style={{ fontFamily: 'var(--font-mono)' }}>{cert.date}</span>
+                  <span className="cert-card-date">{cert.date}</span>
                 </div>
-                <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <div className="cert-card-row">
                   <span>등록번호:</span>
-                  <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.7rem' }}>{cert.serial}</span>
+                  <span className="cert-card-serial">{cert.serial}</span>
                 </div>
               </div>
             </div>
