@@ -223,7 +223,7 @@ header {
 
 /* Hero Section */
 .hero-section {
-  padding: 100px 0 60px;
+  padding: 48px 0 60px;
 }
 
 .hero-grid {
@@ -992,13 +992,13 @@ footer {
   }
 
   .hero-section {
-    padding-top: 100px !important;
-    padding-bottom: 40px !important;
+    padding-top: 40px !important;
+    padding-bottom: 36px !important;
   }
 
   .hero-grid {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 36px;
     text-align: center;
   }
 
@@ -1054,7 +1054,11 @@ footer {
   }
 
   header {
-    padding: 12px 0;
+    padding: 0 !important;
+  }
+
+  .nav-container {
+    height: 56px !important;
   }
 
   .nav-links {
@@ -1062,23 +1066,23 @@ footer {
   }
 
   .section-spacing {
-    padding: 44px 0 !important;
+    padding: 40px 0 !important;
   }
 
   .section-title {
     font-size: 1.85rem;
-    margin-bottom: 30px;
+    margin-bottom: 28px;
   }
   
   .hero-section {
-    padding-top: 76px !important;
-    padding-bottom: 24px !important;
+    padding-top: 24px !important;
+    padding-bottom: 20px !important;
   }
 
   .mbti-badge {
     font-size: 0.78rem;
     padding: 5px 14px;
-    margin-bottom: 14px;
+    margin-bottom: 12px;
   }
 
   .hero-name {
@@ -1413,6 +1417,19 @@ footer {
 @media (max-width: 480px) {
   .container {
     padding: 0 24px !important;
+  }
+
+  .nav-container {
+    height: 50px !important;
+  }
+
+  .hero-section {
+    padding-top: 18px !important;
+    padding-bottom: 16px !important;
+  }
+
+  .mbti-badge {
+    margin-bottom: 10px !important;
   }
 
   .hero-name {
