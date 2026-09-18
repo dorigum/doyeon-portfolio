@@ -184,33 +184,37 @@
     {
       "id": "codetrip",
       "title": "CodeTrip (여행 큐레이션 서비스)",
-      "period": "2026.04.20 ~ 2026.04.29 / 2026.07.20 ~ 진행중",
-      "subtitle": "공공 여행 데이터, 실시간 날씨 추천, 위시리스트 및 메모 연동형 큐레이션 서비스",
+      "period": "2026.04.20 ~ 2026.04.29 / 2026.07.20 ~ 2026.09.21",
+      "subtitle": "공공 여행 데이터 탐색부터 저장·AI 일정 생성·커뮤니티 공유까지 연결한 여행 의사결정 지원 서비스",
       "links": {
         "repo_team": "https://github.com/dorigum/2_CodeTrip_Project",
         "repo_firebase": "https://github.com/dorigum/CodeTrip-firebase-log",
         "service": "https://dorigum-codetrip.web.app/"
       },
-      "techStack": ["React", "Express", "MySQL", "AWS (EC2/RDS)", "Firebase (Auth/RealtimeDB/Hosting)", "Zustand"],
+      "techStack": ["React 19", "Vite", "Firebase Auth/RTDB/Storage/Hosting", "Cloud Functions v2", "Zustand", "TourAPI", "Gemini API"],
       "contributions": [
-        "<b>[Part 1: 2인 팀 프로젝트 (AWS 배포 & 개발)]</b>",
-        "AWS EC2/RDS 인프라 기반의 프론트엔드 및 백엔드 연동 아키텍처 공동 설계",
-        "Kakao Map API 동적 렌더링, 최근 본 여행지 로깅 및 가로 스크롤 카드 UX 개선",
-        "Open-Meteo 실시간 기상 API 및 역지오코딩 Nominatim API를 활용하여 유저 관심 지역별 즉흥 여행지 슬롯머신 추천 흐름 구축",
-        "폴더 기반 위시리스트, 실시간 체크리스트 및 개별 메모 관리를 위한 RDB 스키마 설계 및 CRUD API 개발",
-        "<b>[Part 2: 1인 개인 프로젝트 (Firebase Serverless 포팅)]</b>",
-        "상용 클라우드 인프라 유지 비용 절감 및 공모전 단일 배포 환경 마련을 위해, <b>AWS 서버 구조를 Serverless Firebase 아키텍처로 1인 전면 포팅 리팩토링</b> 완료",
-        "백엔드 Express/MySQL 서버를 걷어내고 브라우저 클라이언트에서 Firebase Authentication 및 Realtime Database를 직접 조회할 수 있도록 데이터 CRUD 흐름 재설계",
-        "한국관광공사 KTO API 대용량 데이터(약 60,000건) 조회 시 발생하는 429 API 호출 제한 및 긴 대기시간(평균 2.0s) 문제를 해결하기 위해 서버 사이드 인메모리 캐싱 도입. 클라이언트 기준 외부 API 호출 횟수를 0회로 차단하고 데이터 응답 속도를 기존 약 2,000ms에서 10ms 미만으로 <b>약 99.5%의 속도 대폭 개선</b>",
-        "여행지 댓글 등록 및 좋아요 액션 시 네트워크 딜레이를 은닉하기 위해 <code>useMutation</code>의 <code>onMutate</code>를 활용해 <b>낙관적 업데이트(Optimistic Update)</b> 적용 및 실패 시 자동 롤백 기능 탑재"
+        "<b>[Part 1: 2인 팀 프로젝트 (AWS 기반 개발)]</b>",
+        "React·Express·MySQL 기반 여행지 탐색 서비스의 화면·API·데이터 연동 구조 공동 설계",
+        "Kakao Map, Open-Meteo, Nominatim API를 연동해 지도·날씨·최근 본 여행지·지역별 추천 흐름 구현",
+        "위시리스트·폴더·메모·체크리스트 기능을 위한 데이터 모델과 CRUD 흐름 설계",
+        "<b>[Part 2: 1인 개인 프로젝트 (Firebase Serverless 전환 및 고도화)]</b>",
+        "AWS/Express/MySQL 구조를 Firebase Auth·Realtime Database·Storage·Hosting·Cloud Functions v2 기반 서버리스 아키텍처로 전환",
+        "TourAPI 여행지·축제 탐색, 관심 지역 기반 신규 정보 알림, 게시글·댓글·좋아요와 작성자 알림 기능 구현",
+        "Gemini API를 Callable Function 뒤에 배치하고 날짜·인원·시간·호출량·JSON 응답을 서버에서 검증하는 AI 여행 플래너 구현",
+        "폴더에 저장한 후보 또는 사용자 조건을 기반으로 일정·체크리스트를 생성하고, 관광공사 데이터 장소와 AI 보완 장소를 구분해 저장",
+        "사용자 UID 기반 Realtime Database Rules, Storage 업로드 제한, Functions Secret으로 개인 데이터·API 키 접근 경계 구성",
+        "GitHub Actions, Playwright E2E, lint/build 및 Rules 테스트를 연결해 공개 라우팅과 핵심 배포 품질 검증"
       ],
       "troubleshooting": [
-        "<b>[Part 1: 대용량 호출 지연 99.5% 개선]</b> 한국관광공사 KTO API 대용량 데이터(약 60,000건) 조회 시 발생하는 API 호출 제한(429) 및 긴 대기시간(평균 2.0s) 문제를 해결하기 위해 서버 사이드 인메모리 캐싱 도입. 클라이언트 기준 외부 API 호출 횟수를 0회로 차단하고 데이터 응답 속도를 기존 약 2,000ms에서 10ms 미만으로 <b>약 99.5%의 속도 대폭 개선</b>",
-        "<b>[Part 2: 체감 속도 0ms 구현]</b> 여행지 댓글 및 좋아요 액션에 <b>낙관적 업데이트(Optimistic Update)</b>를 적용하여 네트워크 상태와 무관하게 사용자 체감 반응 속도 0ms 구현"
+        "<b>[외부 API 호출 안정화]</b> 한국관광공사 TourAPI 대용량 조회의 429와 지연 문제를 인메모리 캐시로 완화하고, 메모리·localStorage·Realtime Database 캐시와 stale fallback을 조합해 반복 호출과 장애 영향을 줄임",
+        "<b>[AI 응답 신뢰성 확보]</b> Callable Function에서 인증·입력 범위·호출량을 검증하고, Gemini 응답 JSON 파싱·일정 구조·장소 검증·체크리스트 정규화로 잘못된 결과 저장을 방지",
+        "<b>[알림 중복 방지]</b> 댓글·좋아요 이벤트를 Database Trigger로 처리하면서 고정 이벤트 ID를 사용해 Functions 재시도에도 중복 알림이 생성되지 않도록 설계",
+        "<b>[배포 품질 검증]</b> CI 전용 Firebase 설정과 Playwright 대기 포트를 정비해 공개 라우팅 E2E 및 PR Quality checks를 통과시키고, Rules·lint·build 검증 흐름을 문서화"
       ],
       "learnings": [
-        "로컬, AWS, Firebase 호스팅 등 아키텍처 환경에 맞춰 성능 및 통신 오버헤드를 고려한 유연한 포팅(Porting) 능력을 키움",
-        "기능의 수보다 사용자가 장소를 고르고, 위시리스트를 분류하고, 체크리스트로 일정을 짜는 E2E 사용자 여정(User Journey)을 설계하는 중요성을 깨달음"
+        "단순 여행지 검색을 넘어 탐색 → 저장·비교 → AI 일정 생성 → 커뮤니티·신규 정보 알림으로 이어지는 E2E 사용자 여정을 설계함",
+        "클라이언트 기능 구현과 서버 검증·보안·자동화·배포 검증을 분리해 운영 가능한 서버리스 서비스 구조를 경험함",
+        "AI 기능은 생성 자체보다 입력 계약, 데이터 출처, 결과 검증, 실패·재시도 정책을 함께 설계해야 신뢰할 수 있음을 배움"
       ]
     },
     {
