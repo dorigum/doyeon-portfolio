@@ -10,12 +10,67 @@
     "learningHabit": "매일 배운 기술과 에러 해결 과정을 Obsidian Vault에 구조화하여 정리하고, 일일 커밋(YYMMDD 컨벤션)을 통해 성장의 발자취를 기록하는 견고한 학습 루틴을 실천하고 있습니다."
   },
   "skills": {
-    "backend": ["Java", "Spring", "Spring Boot", "Spring Security", "JPA", "Node.js", "Express", "REST API", "JWT", "OAuth2", "Flyway"],
-    "database": ["MySQL", "Redis", "PostgreSQL", "Oracle", "pgvector", "Firebase Realtime DB"],
-    "frontend": ["JavaScript", "React", "Vite", "React Router", "Zustand", "TanStack Query", "Axios", "CSS (Glassmorphism)", "Tailwind CSS", "SCSS"],
-    "devops": ["Git", "GitHub Actions", "Docker", "Docker Compose", "AWS (EC2, S3, CloudFront, Route53)", "Prometheus", "Grafana", "Nginx", "Swagger", "Jenkins", "JUnit5", "Testcontainers"],
-    "ai_data": ["Spring AI", "Gemini API", "AWS Bedrock", "OCR", "Python", "Pandas", "RAG"],
-    "collaboration": ["Notion", "Discord", "Obsidian"]
+    "backend": [
+      "Java",
+      "Spring",
+      "Spring Boot",
+      "Spring Security",
+      "JPA",
+      "Node.js",
+      "Express",
+      "REST API",
+      "JWT",
+      "OAuth2",
+      "Flyway"
+    ],
+    "database": [
+      "MySQL",
+      "Redis",
+      "PostgreSQL",
+      "Oracle",
+      "pgvector",
+      "Firebase Realtime DB"
+    ],
+    "frontend": [
+      "JavaScript",
+      "React",
+      "Vite",
+      "React Router",
+      "Zustand",
+      "TanStack Query",
+      "Axios",
+      "CSS (Glassmorphism)",
+      "Tailwind CSS",
+      "SCSS"
+    ],
+    "devops": [
+      "Git",
+      "GitHub Actions",
+      "Docker",
+      "Docker Compose",
+      "AWS (EC2, S3, CloudFront, Route53)",
+      "Prometheus",
+      "Grafana",
+      "Nginx",
+      "Swagger",
+      "Jenkins",
+      "JUnit5",
+      "Testcontainers"
+    ],
+    "ai_data": [
+      "Spring AI",
+      "Gemini API",
+      "AWS Bedrock",
+      "OCR",
+      "Python",
+      "Pandas",
+      "RAG"
+    ],
+    "collaboration": [
+      "Notion",
+      "Discord",
+      "Obsidian"
+    ]
   },
   "studyLog": {
     "backend": [
@@ -111,7 +166,16 @@
         "repo": "https://github.com/dorigum/Baseball-ai-coach",
         "service": "https://baseball-coach-ai.web.app"
       },
-      "techStack": ["React 19", "Tailwind CSS v4", "Spring Boot 3.3.2", "Spring AI", "JPA", "MySQL", "Gemini API", "Firebase Hosting"],
+      "techStack": [
+        "React 19",
+        "Tailwind CSS v4",
+        "Spring Boot 3.3.2",
+        "Spring AI",
+        "JPA",
+        "MySQL",
+        "Gemini API",
+        "Firebase Hosting"
+      ],
       "contributions": [
         "Vite + React 19 및 Tailwind CSS v4 기반의 대화형 KBO 야구 전술 시뮬레이터 설계 및 프론트엔드/백엔드 아키텍처 전반 구축",
         "대화형 SVG 야구장 그래픽 시각화 및 수비수 9명의 마우스 드래그를 활용한 실시간 커스텀 수비 시프트(Defensive Shift) 가이드 핀/점선 오버레이 구현",
@@ -139,7 +203,16 @@
       "links": {
         "repo": "https://github.com/dorigum/Final_ZIPT_Project"
       },
-      "techStack": ["React 19", "Spring Boot 3.5", "JPA", "MySQL", "Redis", "pgvector", "AWS EC2/S3/CloudFront", "Spring AI"],
+      "techStack": [
+        "React 19",
+        "Spring Boot 3.5",
+        "JPA",
+        "MySQL",
+        "Redis",
+        "pgvector",
+        "AWS EC2/S3/CloudFront",
+        "Spring AI"
+      ],
       "contributions": [
         "전월세 계약 전후의 사용자 흐름 기준 홈, 분석, 계약서, 지도, 마이페이지 전체 UI 구조 설계 및 개발",
         "등기부등본 및 계약서 분석 이력과 상세 AI 리포트를 React Query (TanStack Query) 기반 상태 관리 최적화",
@@ -166,7 +239,17 @@
       "links": {
         "repo": "https://github.com/dorigum/3_CodeMate_Project"
       },
-      "techStack": ["Java 17", "Spring Boot", "Spring Security", "JPA", "MySQL", "Flyway", "Docker", "GitHub Actions", "Testcontainers"],
+      "techStack": [
+        "Java 17",
+        "Spring Boot",
+        "Spring Security",
+        "JPA",
+        "MySQL",
+        "Flyway",
+        "Docker",
+        "GitHub Actions",
+        "Testcontainers"
+      ],
       "contributions": [
         "스터디 참여 신청 및 방장의 승인/거절 워크플로우 비즈니스 로직 및 상태 흐름 설계",
         "Refresh Token Rotation (RTR), SHA-256 단방향 해싱, JWT Blacklist(Redis) 기반으로 세션 보안성 극대화",
@@ -191,7 +274,15 @@
         "repo_firebase": "https://github.com/dorigum/CodeTrip-firebase-log",
         "service": "https://dorigum-codetrip.web.app/"
       },
-      "techStack": ["React 19", "Vite", "Firebase Auth/RTDB/Storage/Hosting", "Cloud Functions v2", "Zustand", "TourAPI", "Gemini API"],
+      "techStack": [
+        "React 19",
+        "Vite",
+        "Firebase Auth/RTDB/Storage/Hosting",
+        "Cloud Functions v2",
+        "Zustand",
+        "TourAPI",
+        "Gemini API"
+      ],
       "contributions": [
         "<b>[Part 1: 2인 팀 프로젝트 (AWS 기반 개발)]</b>",
         "React·Express·MySQL 기반 여행지 탐색 서비스의 화면·API·데이터 연동 구조 공동 설계",
@@ -225,7 +316,11 @@
       "links": {
         "repo": "https://github.com/dorigum/1_Cafe_kiosk_Project"
       },
-      "techStack": ["Java 18", "MySQL 8.0", "JDBC"],
+      "techStack": [
+        "Java 18",
+        "MySQL 8.0",
+        "JDBC"
+      ],
       "contributions": [
         "MVC(Model-View-Controller-Service-Repository) Layered Architecture를 충실히 적용하여 콘솔 기반 회원 로그인/결제 기능 개발",
         "회원/비회원별 구매액 포인트 적립 및 차감 트랜잭션 관리와 포인트 변동 이력(PointHistory) 추적성 확보",
@@ -242,21 +337,21 @@
   "timeline": [
     {
       "category": "KOSTA",
-      "title": "AI를 활용한 Java 기반 DevOps 개발자 양성 수료",
+      "title": "AI를 활용한 Java 기반 DevOps 개발자 양성 과정(SW아키텍처(20010201))",
       "date": "2026.02.02 ~ 2026.07.10",
       "description": "한국소프트웨어기술진흥협회(KOSTA) 주관. Java 및 Spring Boot 백엔드 기반 설계, MSA 구조 구축, Docker 컨테이너 오케스트레이션 및 AWS DevOps 배포 자동화 파이프라인 심화 과정 수료."
     },
     {
       "category": "글로벌아카데미",
-      "title": "LowCode 기반 AI융합 스마트관리시스템 개발 심화과정",
+      "title": "LowCode 기반 AI융합 스마트관리시스템 개발 심화 과정(응용SW엔지니어링(20010202))",
       "date": "2025.01.14 ~ 2025.03.17",
-      "description": "총 320시간 이수. 응용SW엔지니어링(직무코드 20010202) 기반 스마트 엔지니어링 프로젝트를 위해 AI를 융합한 삼성 SDS Brity RPA와 OutSystems Lowcode 플랫폼을 활용한 스마트 업무 자동화(Hyperautomation) 관리 시스템 설계 및 개발 역량 학습."
+      "description": "총 320시간 이수. 응용SW엔지니어링 기반 스마트 엔지니어링 프로젝트를 위해 AI를 융합한 삼성 SDS Brity RPA와 OutSystems Lowcode 플랫폼을 활용한 스마트 업무 자동화(Hyperautomation) 관리 시스템 설계 및 개발 역량 학습."
     },
     {
-      "category": "멀티캠퍼스",
-      "title": "온·오프 연계 AI 활용 지능형 서비스 개발 과정",
+      "category": "삼성 멀티캠퍼스",
+      "title": "온·오프 연계 AI 활용 지능형 서비스 개발 과정(빅데이터플랫폼구축(20010209))",
       "date": "2021.03.08 ~ 2021.06.17",
-      "description": "삼성 멀티캠퍼스 K-Digital 교육. Java, SQL, Python, JSP 기본 실습 및 웹 페이지 세미 프로젝트 수행. KT 기가지니 기반의 지능형 서비스 실습 및 Naver AI Platform을 활용해 Spring 아키텍처 기반의 식단/운동 헬스케어 공유 플랫폼 구축 팀 프로젝트 수행."
+      "description": "삼성 멀티캠퍼스 K-Digital 교육 과정(584시간). Java, SQL, Python, JSP 기본 실습 및 웹 페이지 세미 프로젝트 수행. KT 기가지니 기반의 지능형 서비스 실습 및 Naver AI Platform을 활용해 Spring 아키텍처 기반의 식단/운동 헬스케어 공유 플랫폼 구축 팀 프로젝트 수행."
     },
     {
       "category": "대학교",
@@ -273,14 +368,14 @@
     {
       "category": "대학교",
       "title": "2018 학술 경진 대회",
-      "date": "2018.09.10 ~ 2018.11.30",
+      "date": "2018.09.03 ~ 2018.11.14",
       "description": "학부 학술제 프로젝트 팀장 역임. '지하철 역사 내 이용 동선 및 시간 단축 개선방안'을 주제로, Arena 시뮬레이션 프로그램을 설계하여 동선 데이터를 과학적으로 분석하고 최종 구조 개선안 도출."
     },
     {
       "category": "월드프렌즈 코리아",
       "title": "월드프렌즈 ICT 봉사단",
       "date": "2018.07.08 ~ 2018.08.05",
-      "description": "과학기술정보통신부 주관 해외 ICT 봉사단 파견. IT 총괄 PM으로서 라오스 국립관광대학(NIT) 안드로이드 앱 기획 및 설계를 전담하여 120시간 동안 보급 프로젝트를 완수."
+      "description": "과학기술정보통신부 주관 해외 ICT 봉사단 파견(120시간). IT 총괄 PM으로서 라오스 국립관광대학(NIT) 안드로이드 앱 기획 및 설계를 전담하여 120시간 동안 보급 프로젝트를 완수."
     }
   ]
 }
