@@ -485,8 +485,8 @@ header {
 }
 
 .impact-panel::after {
-  bottom: 32px;
-  left: 18px;
+  top: 248px;
+  left: 12px;
   width: 42px;
   height: 42px;
   animation: bubble-drift-two 6s ease-in-out infinite;
