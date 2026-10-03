@@ -1,12 +1,12 @@
 {
   "profile": {
     "name": "구도연 (Doyeon Koo) 🐻‍❄️",
-    "title": "다재다능한 제너럴리스트 PM & Full-Stack Developer",
+    "title": "사용자 경험과 운영 안정성을 함께 개선하는 Full-Stack Developer",
     "email": "kkamang03@gmail.com",
     "github": "https://github.com/dorigum",
     "mbti": "ISFJ",
     "major": "경영정보학 / 산업공학 전공",
-    "description": "하고 싶은 것도, 좋아하는 것도 많은 다재다능 제너럴리스트 PM을 꿈꾸고 있어요. 사용자의 흐름을 먼저 생각하고, 직접 만들고 고치고 배포하면서 배운 것을 차곡차곡 기록합니다 🚀",
+    "description": "사용자의 불편을 서비스 흐름으로 풀고, 데이터 정합성·성능·운영 효율을 함께 고려해 오래 유지·확장할 수 있는 서비스를 만듭니다.",
     "learningHabit": "매일 배운 기술과 에러 해결 과정을 Obsidian Vault에 구조화하여 정리하고, 일일 커밋(YYMMDD 컨벤션)을 통해 성장의 발자취를 기록하는 견고한 학습 루틴을 실천하고 있습니다."
   },
   "skills": {

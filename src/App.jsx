@@ -1,110 +1,38 @@
 import React, { useState, useEffect } from 'react';
 import portfolioData from './data/portfolio-data.json';
 
+const projectBriefs = {
+  baseball: {
+    problem: '복잡한 실시간 수비·경기 상태에서 최신 전술 정보를 일관되게 보여줘야 하는 문제',
+    role: 'React·Spring AI 기반 인터랙션, 상태 흐름, AI 피드백 API 설계',
+    outcome: '요청 취소와 fallback UX로 오래된 응답이 최신 화면을 덮는 문제를 방지'
+  },
+  zipt: {
+    problem: '계약 전 필요한 여러 확인 절차와 AI 분석 대기 흐름이 분산된 문제',
+    role: '전체 사용자 흐름·화면 구조, 지도·AI 브리핑 상태 관리 구현',
+    outcome: '초기 JS 번들을 73.7% 줄이고 분석 단계의 로딩·오류 경험을 정리'
+  },
+  codemate: {
+    problem: '마감 직전 동시 신청에서 정원 초과와 데이터 불일치가 생길 수 있는 문제',
+    role: '신청 상태 흐름, 인증·권한, 테스트 가능한 백엔드 구조 설계',
+    outcome: '비관적 락과 통합 테스트로 정원 초과 방지와 데이터 정합성 검증'
+  },
+  codetrip: {
+    problem: '분산된 여행 정보와 외부 API 지연으로 의사결정 흐름이 끊기는 문제',
+    role: '서버리스 전환, 외부 API·AI 응답 검증, 보안·배포 품질 설계',
+    outcome: '캐시·stale fallback과 CI/E2E 검증으로 장애 영향과 반복 호출을 완화'
+  },
+  cafekiosk: {
+    problem: '주문·포인트·통계 데이터를 일관되게 관리하고 추적해야 하는 문제',
+    role: 'Layered Architecture, 트랜잭션, 예외 처리와 CSV 리포트 구현',
+    outcome: '포인트 변동 이력과 매출 분석을 갖춘 확장 가능한 도메인 구조 확보'
+  }
+};
+
 function App() {
   const { profile, skills, certifications, learningTopics, featuredProjects, timeline, studyLog } = portfolioData;
   const [activeSection, setActiveSection] = useState('home');
   const [showTopBtn, setShowTopBtn] = useState(false);
-
-  // 1. Code Typer Logic
-  const codeLines = [
-    { isStatic: true, text: '// 🐻‍❄️ Polar Bear 빼꼼 Doyeon Koo', tokens: [{text: '// 🐻‍❄️ Polar Bear 빼꼼 Doyeon Koo', color: 'var(--token-comment)'}] },
-    { isStatic: true, text: 'public class DoyeonKoo {', tokens: [{text: 'public class ', color: 'var(--token-keyword)'}, {text: 'DoyeonKoo', color: 'var(--token-class)'}, {text: ' {', color: 'var(--text-primary)'}] },
-    { isStatic: true, text: '    public static void main(String[] args) {', tokens: [{text: '    public static void ', color: 'var(--token-keyword)'}, {text: 'main', color: 'var(--token-method)'}, {text: '(String[] args) {', color: 'var(--text-primary)'}] },
-    { isStatic: true, text: '        Developer pm = new Developer("구도연");', tokens: [{text: '        Developer', color: 'var(--token-class)'}, {text: ' pm = ', color: 'var(--text-primary)'}, {text: 'new ', color: 'var(--token-keyword)'}, {text: 'Developer', color: 'var(--token-class)'}, {text: '(', color: 'var(--text-primary)'}, {text: '"구도연"', color: 'var(--token-string)'}, {text: ');', color: 'var(--text-primary)'}] },
-    { isStatic: false, text: '        pm.setNickname("Polar Bear 빼꼼");', tokens: [{text: '        pm.', color: 'var(--text-primary)'}, {text: 'setNickname', color: 'var(--token-method)'}, {text: '(', color: 'var(--text-primary)'}, {text: '"Polar Bear 빼꼼"', color: 'var(--token-string)'}, {text: ');', color: 'var(--text-primary)'}] },
-    { isStatic: false, text: '        pm.addSkills("Spring Boot", "React", "AI RAG");', tokens: [{text: '        pm.', color: 'var(--text-primary)'}, {text: 'addSkills', color: 'var(--token-method)'}, {text: '(', color: 'var(--text-primary)'}, {text: '"Spring Boot", "React", "AI RAG"', color: 'var(--token-string)'}, {text: ');', color: 'var(--text-primary)'}] },
-    { isStatic: false, text: '        pm.setVision("Generalist PM who codes 🐻‍❄️");', tokens: [{text: '        pm.', color: 'var(--text-primary)'}, {text: 'setVision', color: 'var(--token-method)'}, {text: '(', color: 'var(--text-primary)'}, {text: '"Generalist PM who codes 🐻‍❄️"', color: 'var(--token-string)'}, {text: ');', color: 'var(--text-primary)'}] },
-    { isStatic: false, text: '        pm.runDailyCommit();', tokens: [{text: '        pm.', color: 'var(--text-primary)'}, {text: 'runDailyCommit', color: 'var(--token-method)'}, {text: '();', color: 'var(--text-primary)'}] },
-    { isStatic: true, text: '    }', tokens: [{text: '    }', color: 'var(--text-primary)'}] },
-    { isStatic: true, text: '}', tokens: [{text: '}', color: 'var(--text-primary)'}] }
-  ];
-
-  // Calculate total characters of dynamic lines to type
-  const totalLength = codeLines.filter(line => !line.isStatic).reduce((acc, line) => acc + line.text.length, 0);
-  const [typeProgress, setTypeProgress] = useState(0);
-
-  useEffect(() => {
-    let timer;
-    const tick = () => {
-      setTypeProgress((prev) => {
-        if (prev >= totalLength) {
-          // Stay typed, do not reset loop
-          return prev;
-        }
-        // Random typing speed variation
-        const nextTick = Math.min(prev + 1, totalLength);
-        timer = setTimeout(tick, Math.random() * 30 + 15);
-        return nextTick;
-      });
-    };
-
-    timer = setTimeout(tick, 1200);
-    return () => clearTimeout(timer);
-  }, [totalLength]);
-
-  // Helper to render code tokens up to current typing progress
-  const renderTypedCode = () => {
-    let dynamicCharCounter = 0;
-    
-    return codeLines.map((line, lineIdx) => {
-      // 1. Static lines: always render fully
-      if (line.isStatic) {
-        return (
-          <div key={lineIdx} className="code-line">
-            <span className="line-num">{lineIdx + 1}</span>
-            <span className="line-content">
-              {line.tokens.map((token, tokIdx) => (
-                <span key={tokIdx} style={{ color: token.color }}>
-                  {token.text}
-                </span>
-              ))}
-            </span>
-          </div>
-        );
-      }
-
-      // 2. Dynamic lines: render based on typing progress without collapsing line slots
-      const prevCounter = dynamicCharCounter;
-      const lineProgress = Math.max(0, typeProgress - prevCounter);
-      dynamicCharCounter += line.text.length;
-
-      const isLineStarted = typeProgress >= prevCounter;
-      const isLineActive = isLineStarted && typeProgress < dynamicCharCounter;
-      const isLastDynamicLine = lineIdx === 7;
-      const isFinished = typeProgress >= totalLength;
-
-      let renderedLength = 0;
-      return (
-        <div key={lineIdx} className="code-line">
-          <span className="line-num">{lineIdx + 1}</span>
-          <span className="line-content">
-            {isLineStarted ? (
-              line.tokens.map((token, tokIdx) => {
-                const tokenProgress = Math.max(0, lineProgress - renderedLength);
-                renderedLength += token.text.length;
-
-                if (tokenProgress <= 0) return null;
-                
-                const textToRender = token.text.substring(0, tokenProgress);
-                return (
-                  <span key={tokIdx} style={{ color: token.color }}>
-                    {textToRender}
-                  </span>
-                );
-              })
-            ) : (
-              // Empty placeholder space so the line preserves height and doesn't shift
-              <span className="empty-line-placeholder">&nbsp;</span>
-            )}
-            {/* Show blinking cursor on the currently active typing line, or at end when done */}
-            {isLineActive && <span className="code-cursor">|</span>}
-            {isLastDynamicLine && isFinished && <span className="code-cursor">|</span>}
-          </span>
-        </div>
-      );
-    });
-  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -224,23 +152,18 @@ function App() {
         <div className="hero-grid">
           {/* Left Panel: Introduction Text */}
           <div className="hero-content">
-            <div className="mbti-badge">{profile.mbti} • {profile.major}</div>
-            <h1 className="hero-name">{profile.name}</h1>
-            <h2 className="hero-title">
-              다재다능한 <span className="gradient-text-anim">제너럴리스트 PM</span> & <span className="gradient-text-anim">Full-Stack Developer</span>
-            </h2>
+            <div className="hero-eyebrow">구도연 · FULL-STACK DEVELOPER · {profile.major}</div>
+            <h1 className="hero-name">불편을 줄이는<br />운영 중심 개발자</h1>
+            <h2 className="hero-title">사용자 경험 · 운영 안정성 · 지속 가능한 확장</h2>
             <p className="hero-desc">
-              <span className="hero-desc-line">
-                하고 싶은 것도, 좋아하는 것도 많은<br className="mobile-only-br" />{' '}
-                <span className="gradient-text-anim">다재다능 제너럴리스트 PM</span>을 꿈꾸고 있어요.
-              </span>
-              <span className="hero-desc-line">
-                <span className="gradient-text-anim">사용자의 흐름</span>을 먼저 생각하고, 직접 만들고 고치고 배포하면서<br className="mobile-only-br" />{' '}
-                배운 것을 차곡차곡 기록합니다 🚀
-              </span>
+              {profile.description}
             </p>
+            <div className="hero-keywords" aria-label="핵심 역량">
+              <span>사용자 흐름 설계</span><span>데이터 정합성</span><span>성능·비용 최적화</span><span>배포·운영</span>
+            </div>
             <div className="social-links">
               <div className="hero-action-btns">
+                <a href="#projects" className="social-btn primary">대표 프로젝트 보기 <span aria-hidden="true">↓</span></a>
                 <a href={profile.github} target="_blank" rel="noopener noreferrer" className="social-btn primary">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
@@ -266,19 +189,22 @@ function App() {
             </div>
           </div>
 
-          {/* Right Panel: Interactive Code typing Animation */}
+          {/* Right Panel: Recruiter-facing impact summary */}
           <div className="hero-code-panel">
-            <div className="mockup-editor">
-              <div className="editor-header">
-                <span className="dot dot-close"></span>
-                <span className="dot dot-minimize"></span>
-                <span className="dot dot-maximize"></span>
-                <span className="editor-tab">DoyeonKoo.java</span>
+            <aside className="impact-panel" aria-label="개발 방식과 대표 성과">
+              <p className="impact-panel-label">HOW I BUILD</p>
+              <h2>문제를 이해하고,<br />안정적으로 개선합니다.</h2>
+              <ol className="impact-steps">
+                <li><span>01</span><div><strong>사용자·업무 흐름 파악</strong><p>불편과 정책·데이터 조건을 함께 정리합니다.</p></div></li>
+                <li><span>02</span><div><strong>안전한 구조로 구현</strong><p>인증, 상태, 예외와 테스트를 설계합니다.</p></div></li>
+                <li><span>03</span><div><strong>운영하며 지속 개선</strong><p>성능·비용·장애 영향을 측정하고 보완합니다.</p></div></li>
+              </ol>
+              <div className="impact-metrics">
+                <div><strong>73.7%</strong><span>초기 JS 번들 감축</span></div>
+                <div><strong>CI / E2E</strong><span>배포 품질 검증</span></div>
+                <div><strong>Lock + Test</strong><span>동시성 정합성 검증</span></div>
               </div>
-              <div className="editor-body">
-                {renderTypedCode()}
-              </div>
-            </div>
+            </aside>
           </div>
         </div>
       </section>
@@ -433,7 +359,9 @@ function App() {
 
       {/* Featured Projects Section */}
       <section id="projects" className="container section-spacing">
-        <h2 className="section-title">Featured Projects</h2>
+        <p className="section-kicker">SELECTED WORK</p>
+        <h2 className="section-title">문제와 결과로 설명하는 프로젝트</h2>
+        <p className="section-intro">기술을 나열하기보다, 어떤 문제를 맡아 어떤 판단으로 개선했는지 보여드립니다.</p>
         <div className="projects-grid">
           {featuredProjects.map((project) => (
             <div key={project.id} className="glass-card project-card reveal-on-scroll">
@@ -444,6 +372,12 @@ function App() {
                 </div>
                 <h3 className="project-title">{project.title}</h3>
                 <p className="project-subtitle">{project.subtitle}</p>
+
+                <div className="project-brief-grid">
+                  <div><span>PROBLEM</span><p>{projectBriefs[project.id]?.problem}</p></div>
+                  <div><span>MY ROLE</span><p>{projectBriefs[project.id]?.role}</p></div>
+                  <div><span>OUTCOME</span><p>{projectBriefs[project.id]?.outcome}</p></div>
+                </div>
 
                 {/* Project Action Buttons */}
                 <div className="project-actions-horizontal">
@@ -492,8 +426,9 @@ function App() {
                 </div>
               </div>
 
-              {/* Details (Full Width) */}
-              <div className="project-body-content">
+              <details className="project-details">
+                <summary>구현 내용과 트러블슈팅 전체 보기</summary>
+                <div className="project-body-content">
                 <div className="contributions-list">
                   <h4>💡 담당 업무 및 구현 기여점</h4>
                   <ul>
@@ -522,7 +457,8 @@ function App() {
                     ))}
                   </ul>
                 </div>
-              </div>
+                </div>
+              </details>
             </div>
           ))}
         </div>
