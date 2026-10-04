@@ -1,12 +1,12 @@
 {
   "profile": {
     "name": "구도연 (Doyeon Koo) 🐻‍❄️",
-    "title": "사용자 경험과 운영 안정성을 함께 개선하는 Full-Stack Developer",
+    "title": "사용자와 현장의 흐름을 읽고, 신뢰할 수 있는 시스템으로 해결하는 Full-Stack Developer",
     "email": "kkamang03@gmail.com",
     "github": "https://github.com/dorigum",
     "mbti": "ISFJ",
-    "major": "경영정보학 / 산업공학 전공",
-    "description": "사용자의 불편을 서비스 흐름으로 풀고, 데이터 정합성·성능·운영 효율을 함께 고려해 오래 유지·확장할 수 있는 서비스를 만듭니다.",
+    "major": "산업공학 / 경영정보학 (IE & MIS)",
+    "description": "산업공학의 프로세스 분석적 사고와 데이터 분석(ADsP, SQLD) 역량을 바탕으로, 사용자와 현장의 병목을 직관적인 UI/UX로 풀어내고 데이터 정합성·성능·복원력을 갖춘 백엔드 시스템으로 완성합니다. 복잡한 문제를 신뢰할 수 있는 소프트웨어로 전환하는 데 집중합니다.",
     "learningHabit": "매일 배운 기술과 에러 해결 과정을 Obsidian Vault에 구조화하여 정리하고, 일일 커밋(YYMMDD 컨벤션)을 통해 성장의 발자취를 기록하는 견고한 학습 루틴을 실천하고 있습니다."
   },
   "skills": {
