@@ -373,6 +373,7 @@ function App() {
       {/* Skills Section */}
       <section id="skills" className="container section-spacing">
         <h2 className="section-title">Tech Stack</h2>
+        <p className="section-intro">사용자 경험부터 데이터 무결성, 안정적인 배포까지 책임지는 기술 스택입니다.</p>
         <div className="skills-grid">
           <div className="glass-card skills-card reveal-on-scroll">
             <h3>Backend & Server</h3>
@@ -428,6 +429,7 @@ function App() {
       {/* Learning & Habits Section */}
       <section id="habits" className="container section-spacing">
         <h2 className="section-title">Continuous Learning & Habits</h2>
+        <p className="section-intro">매일의 기록(Obsidian)과 깊이 있는 원리 탐구로 이어가는 지속 가능한 성장 루틴입니다.</p>
         <div className="glass-card habits-container reveal-on-scroll habits-padding">
           <div className="habit-header">
             <span className="habit-icon">📝</span>
@@ -495,8 +497,7 @@ function App() {
 
       {/* Licenses & Certifications Section */}
       <section id="certifications" className="container section-spacing">
-        <p className="section-kicker">CREDENTIALS & SPECIALTY</p>
-        <h2 className="section-title">자격 및 직무 전문성</h2>
+        <h2 className="section-title">Licenses & Certifications</h2>
         <p className="section-intro">소프트웨어 공학 및 데이터 분석·모델링 역량을 공인 자격과 실무 지식으로 증명합니다.</p>
         <div className="certs-grid">
           {certifications.map((cert, index) => (
@@ -534,9 +535,8 @@ function App() {
 
       {/* Featured Projects Section */}
       <section id="projects" className="container section-spacing">
-        <p className="section-kicker">SELECTED WORK</p>
-        <h2 className="section-title">문제와 결과로 설명하는 프로젝트</h2>
-        <p className="section-intro">기술을 나열하기보다, 어떤 문제를 맡아 어떤 판단으로 개선했는지 보여드립니다.</p>
+        <h2 className="section-title">Featured Projects</h2>
+        <p className="section-intro">기술 나열을 넘어, 사용자와 현장의 문제를 신뢰할 수 있는 시스템으로 해결한 대표 프로젝트입니다.</p>
         <div className="projects-grid">
           {featuredProjects.map((project) => (
             <div key={project.id} className="glass-card project-card reveal-on-scroll">
@@ -675,6 +675,7 @@ function App() {
       {/* Experience / Timeline Section */}
       <section id="timeline" className="container section-spacing">
         <h2 className="section-title">Experience & Projects Archive</h2>
+        <p className="section-intro">협업과 문제 해결, 기능 구현의 흐름을 시간 순으로 기록한 프로젝트 아카이브입니다.</p>
         <div className="timeline-container">
           <div className="timeline-line"></div>
           {timeline.map((item, index) => (
