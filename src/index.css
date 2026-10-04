@@ -252,6 +252,7 @@ header {
 .hero-eyebrow {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 10px;
   color: var(--text-secondary);
   font-family: var(--font-mono);
@@ -1848,13 +1849,13 @@ footer {
 /* Small Smartphone Optimization (<= 480px) */
 @media (max-width: 480px) {
   .container {
-    padding-left: 20px !important;
-    padding-right: 20px !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
   }
 
   .section-spacing {
-    padding-top: 44px !important;
-    padding-bottom: 44px !important;
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
   }
 
   .nav-container {
@@ -1866,58 +1867,179 @@ footer {
     padding-bottom: 16px !important;
   }
 
-  .mbti-badge {
-    margin-bottom: 10px !important;
+  .hero-eyebrow {
+    font-size: 0.68rem !important;
+    gap: 6px !important;
+    justify-content: center !important;
+    text-align: center !important;
+    line-height: 1.45 !important;
+    word-break: keep-all !important;
   }
 
   .hero-name {
-    font-size: 1.75rem;
+    font-size: 1.68rem !important;
+    line-height: 1.28 !important;
   }
 
-  .hero-title {
-    font-size: 0.98rem;
+  .hero-subtitle {
+    font-size: 0.92rem !important;
+    line-height: 1.55 !important;
+    padding: 0 4px !important;
   }
 
   .hero-desc {
-    font-size: 0.85rem;
-    line-height: 1.65;
-    padding: 0 2px;
+    font-size: 0.85rem !important;
+    line-height: 1.65 !important;
+    padding: 0 !important;
+    margin-bottom: 20px !important;
+  }
+
+  .hero-keywords {
+    gap: 6px !important;
+    margin: -4px 0 20px !important;
+  }
+
+  .hero-keywords span {
+    font-size: 0.72rem !important;
+    padding: 4px 8px !important;
   }
 
   .hero-action-btns {
+    flex-wrap: wrap !important;
+    width: 100% !important;
+    max-width: 100% !important;
     gap: 8px !important;
   }
 
-  .hero-action-btns .social-btn {
-    padding: 10px 8px !important;
+  .hero-action-btns .social-btn.primary {
+    width: 100% !important;
+    flex: 1 1 100% !important;
+    justify-content: center !important;
+    padding: 11px 14px !important;
+    font-size: 0.85rem !important;
+  }
+
+  .hero-action-btns .social-btn.secondary {
+    flex: 1 1 45% !important;
+    min-width: 0 !important;
+    justify-content: center !important;
     font-size: 0.8rem !important;
+    padding: 10px 8px !important;
+  }
+
+  /* Right Card: 3-Pillar Engineering Lens on Mobile */
+  .engineering-lens-card {
+    padding: 18px 14px !important;
+    border-radius: 14px !important;
+    margin-top: 8px !important;
+  }
+
+  .lens-card-title {
+    font-size: 1.1rem !important;
+    line-height: 1.35 !important;
+  }
+
+  .lens-card-subtitle {
+    font-size: 0.76rem !important;
+  }
+
+  .lens-layer-item {
+    padding: 12px 10px !important;
+    gap: 10px !important;
+  }
+
+  .layer-marker {
+    width: 80px !important;
+    flex: 0 0 80px !important;
+  }
+
+  .layer-num {
+    font-size: 0.88rem !important;
+  }
+
+  .layer-tag {
+    font-size: 0.58rem !important;
+  }
+
+  .layer-title {
+    font-size: 0.84rem !important;
+  }
+
+  .layer-desc {
+    font-size: 0.75rem !important;
+    line-height: 1.48 !important;
+  }
+
+  .layer-chips span {
+    font-size: 0.66rem !important;
+    padding: 2px 6px !important;
+  }
+
+  .lens-metrics-strip {
     gap: 6px !important;
+    padding-top: 10px !important;
   }
 
-  .mockup-editor {
-    height: 290px;
+  .lens-metric-cell {
+    padding: 7px 4px !important;
+    min-height: 60px !important;
   }
 
-  .editor-body {
-    padding: 10px 12px;
-    gap: 3px;
+  .lens-metric-cell .metric-val {
+    font-size: 0.82rem !important;
   }
 
-  .code-line {
-    font-size: 0.7rem;
+  .lens-metric-cell .metric-lbl {
+    font-size: 0.62rem !important;
+    line-height: 1.3 !important;
+    white-space: normal !important;
+    word-break: keep-all !important;
   }
 
-  .code-line .line-num {
-    width: 18px;
-    font-size: 0.64rem;
-  }
-
+  /* Projects */
   .project-card {
-    padding: 26px 20px !important;
+    padding: 22px 16px !important;
   }
 
   .project-title {
-    font-size: 1.3rem !important;
+    font-size: 1.25rem !important;
+    line-height: 1.35 !important;
+    word-break: keep-all !important;
+  }
+
+  .project-subtitle {
+    font-size: 0.88rem !important;
+    white-space: normal !important;
+    line-height: 1.55 !important;
+  }
+
+  .lens-col {
+    padding: 12px 12px !important;
+  }
+
+  .lens-col-label {
+    font-size: 0.68rem !important;
+  }
+
+  .lens-col-text {
+    font-size: 0.82rem !important;
+    line-height: 1.55 !important;
+  }
+
+  .project-metric-badge {
+    padding: 4px 8px !important;
+  }
+
+  .project-metric-badge .badge-label {
+    font-size: 0.7rem !important;
+  }
+
+  .project-metric-badge .badge-value {
+    font-size: 0.76rem !important;
+  }
+
+  .project-actions-horizontal {
+    gap: 6px !important;
   }
 
   .project-btn {
