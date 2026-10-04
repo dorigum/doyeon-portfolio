@@ -1358,18 +1358,18 @@ footer {
 
   .hero-keywords { justify-content: center; }
 
-  .impact-panel { margin: 0 auto; text-align: left; }
-
   .hero-code-panel {
     width: 100%;
     max-width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
+    margin: 0 auto;
   }
 
-  .mockup-editor {
-    max-width: 490px;
-    height: 350px;
+  .engineering-lens-card {
+    margin: 0 auto !important;
+    text-align: left;
   }
 
   .hero-name {
@@ -1468,7 +1468,7 @@ footer {
   .hero-keywords { justify-content: center; margin: -8px 0 24px; }
   .hero-keywords span { font-size: .73rem; padding: 5px 8px; }
   
-  .engineering-lens-card { padding: 20px 16px; border-radius: 14px; max-width: 100%; margin-top: 10px; }
+  .engineering-lens-card { padding: 20px 16px; border-radius: 14px; max-width: 100%; margin: 10px auto 0 !important; text-align: left; }
   .lens-card-title { font-size: 1.15rem; }
   .lens-card-subtitle { font-size: 0.78rem; }
   .lens-layer-item { padding: 11px 12px; gap: 10px; }
@@ -1917,7 +1917,8 @@ footer {
   .engineering-lens-card {
     padding: 18px 14px !important;
     border-radius: 14px !important;
-    margin-top: 8px !important;
+    margin: 8px auto 0 !important;
+    text-align: left;
   }
 
   .lens-card-title {
