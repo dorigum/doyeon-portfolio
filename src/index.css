@@ -211,6 +211,21 @@ header {
   -webkit-text-fill-color: transparent;
 }
 
+.header-logo-icon {
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  display: inline-block;
+  vertical-align: middle;
+  object-fit: contain;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.12);
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.logo:hover .header-logo-icon {
+  transform: scale(1.15) rotate(-6deg);
+}
+
 .nav-links {
   display: flex;
   gap: 32px;
@@ -637,12 +652,11 @@ header {
 }
 
 .skills-card h3 {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
+  font-size: 1.15rem;
+  margin-bottom: 18px;
   font-family: 'Outfit', 'Noto Sans KR', sans-serif;
   color: var(--text-primary);
-  border-left: 3px solid var(--glow-purple);
-  padding-left: 12px;
+  font-weight: 700;
 }
 
 .skill-badges {
@@ -773,7 +787,7 @@ header {
 
 .cert-card-standalone {
   padding: 24px;
-  border-left: 3px solid var(--glow-purple);
+  border: 1px solid var(--glass-border);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -784,9 +798,8 @@ header {
 }
 
 .cert-card-standalone:hover {
-  border-left-color: var(--glow-blue) !important;
-  border-color: rgba(124, 58, 237, 0.2);
-  box-shadow: 0 10px 30px rgba(124, 58, 237, 0.06);
+  border-color: rgba(37, 99, 235, 0.25);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
   transform: translateY(-2px);
 }
 
@@ -853,16 +866,6 @@ header {
   overflow: hidden;
 }
 
-.project-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 4px;
-  height: 100%;
-  background: linear-gradient(to bottom, var(--glow-blue), var(--glow-purple));
-}
-
 .project-header-container {
   width: 100%;
   display: flex;
@@ -893,22 +896,15 @@ header {
 
 .lens-col:hover {
   background: #ffffff;
+  border-color: rgba(37, 99, 235, 0.2);
   box-shadow: 0 4px 14px rgba(15, 23, 42, 0.04);
 }
 
-.lens-col.problem {
-  border-left: 3px solid #f43f5e;
-  background: linear-gradient(to bottom, rgba(254, 242, 242, 0.5), rgba(248, 250, 252, 0.85));
-}
-
-.lens-col.dataflow {
-  border-left: 3px solid #0284c7;
-  background: linear-gradient(to bottom, rgba(240, 249, 255, 0.5), rgba(248, 250, 252, 0.85));
-}
-
+.lens-col.problem,
+.lens-col.dataflow,
 .lens-col.reliability {
-  border-left: 3px solid #10b981;
-  background: linear-gradient(to bottom, rgba(236, 253, 245, 0.5), rgba(248, 250, 252, 0.85));
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  background: #f8fafc;
 }
 
 .lens-col-header {

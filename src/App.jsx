@@ -134,7 +134,7 @@ function App() {
       <header>
         <div className="container nav-container">
           <a href="#home" className="logo">
-            <span>&lt;</span>Doyeon 🐻‍❄️ <span>/&gt;</span>
+            <span>&lt;</span>Doyeon <img src="/favicon-simple-1.svg" alt="🐻‍❄️" className="header-logo-icon" /> <span>/&gt;</span>
           </a>
           <nav className="nav-links">
             <a 
