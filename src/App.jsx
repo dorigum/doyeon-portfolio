@@ -59,6 +59,61 @@ const projectHighlights = {
   }
 };
 
+const renderCertIcon = (icon) => {
+  switch (icon) {
+    case 'code':
+      return (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <polyline points="16 18 22 12 16 6" />
+          <polyline points="8 6 2 12 8 18" />
+        </svg>
+      );
+    case 'chart':
+      return (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <line x1="18" y1="20" x2="18" y2="10" />
+          <line x1="12" y1="20" x2="12" y2="4" />
+          <line x1="6" y1="20" x2="6" y2="14" />
+        </svg>
+      );
+    case 'database':
+      return (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <ellipse cx="12" cy="5" rx="9" ry="3" />
+          <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" />
+          <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
+        </svg>
+      );
+    case 'palette':
+      return (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <circle cx="13.5" cy="6.5" r=".5" fill="currentColor" />
+          <circle cx="17.5" cy="10.5" r=".5" fill="currentColor" />
+          <circle cx="8.5" cy="7.5" r=".5" fill="currentColor" />
+          <circle cx="6.5" cy="12.5" r=".5" fill="currentColor" />
+          <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.563-2.512 5.563-5.563C22 6.5 17.5 2 12 2z" />
+        </svg>
+      );
+    case 'workflow':
+      return (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+          <circle cx="9" cy="7" r="4" />
+          <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+          <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+        </svg>
+      );
+    case 'shield':
+      return (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+        </svg>
+      );
+    default:
+      return null;
+  }
+};
+
 function App() {
   const { profile, skills, certifications, learningTopics, featuredProjects, timeline, studyLog } = portfolioData;
   const [activeSection, setActiveSection] = useState('home');
@@ -438,23 +493,37 @@ function App() {
         </div>
       </section>
 
-      {/* Licenses & Certifications Section (Separated to the bottom) */}
+      {/* Licenses & Certifications Section */}
       <section id="certifications" className="container section-spacing">
-        <h2 className="section-title">Licenses & Certifications</h2>
+        <p className="section-kicker">CREDENTIALS & SPECIALTY</p>
+        <h2 className="section-title">자격 및 직무 전문성</h2>
+        <p className="section-intro">소프트웨어 공학 및 데이터 분석·모델링 역량을 공인 자격과 실무 지식으로 증명합니다.</p>
         <div className="certs-grid">
           {certifications.map((cert, index) => (
-            <div key={index} className="glass-card cert-card-standalone reveal-on-scroll">
+            <div 
+              key={index} 
+              className={`glass-card cert-card-standalone reveal-on-scroll ${cert.isCore ? 'core-cert' : ''}`}
+            >
+              <div className="cert-top-row">
+                <div className={`cert-icon-box ${cert.icon || 'code'}`}>
+                  {renderCertIcon(cert.icon)}
+                </div>
+                <div className="cert-badge-group">
+                  <span className={`cert-cat-pill ${cert.isCore ? 'core-cat' : ''}`}>{cert.category}</span>
+                  <span className="cert-badge-pill">{cert.badge}</span>
+                </div>
+              </div>
               <div className="cert-card-header">
                 <h3 className="cert-card-title">{cert.title}</h3>
                 <span className="cert-card-issuer">{cert.issuer}</span>
               </div>
               <div className="cert-card-meta">
                 <div className="cert-card-row">
-                  <span>취득일자:</span>
+                  <span className="cert-meta-label">취득일자</span>
                   <span className="cert-card-date">{cert.date}</span>
                 </div>
                 <div className="cert-card-row">
-                  <span>등록번호:</span>
+                  <span className="cert-meta-label">등록번호</span>
                   <span className="cert-card-serial">{cert.serial}</span>
                 </div>
               </div>

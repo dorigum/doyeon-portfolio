@@ -105,36 +105,60 @@
   "certifications": [
     {
       "title": "정보처리기사",
+      "category": "Software Engineering",
+      "badge": "국가기술자격",
+      "isCore": true,
+      "icon": "code",
       "issuer": "한국산업인력공단",
       "date": "2022.06.17",
       "serial": "222011******"
     },
     {
       "title": "ADsP(데이터분석준전문가)",
+      "category": "Data Analytics",
+      "badge": "국가공인",
+      "isCore": true,
+      "icon": "chart",
       "issuer": "한국데이터산업진흥원",
       "date": "2021.04.09",
       "serial": "ADsP-028******"
     },
     {
       "title": "SQLD(SQL 개발자)",
+      "category": "Database & SQL",
+      "badge": "국가공인",
+      "isCore": true,
+      "icon": "database",
       "issuer": "한국데이터산업진흥원",
       "date": "2020.06.30",
       "serial": "SQLD-037****"
     },
     {
       "title": "GTQ그래픽기술자격 1급 (포토샵)",
+      "category": "UI & Graphic Design",
+      "badge": "국가공인",
+      "isCore": false,
+      "icon": "palette",
       "issuer": "한국생산성본부",
       "date": "2015.02.13",
       "serial": "GA01G151********"
     },
     {
       "title": "CS Leaders(관리사)",
+      "category": "Customer & Process",
+      "badge": "국가공인",
+      "isCore": false,
+      "icon": "workflow",
       "issuer": "한국정보평가협회",
       "date": "2016.10.18",
       "serial": "160060****"
     },
     {
       "title": "소방안전관리자 2급",
+      "category": "Safety & Ops",
+      "badge": "국가전문자격",
+      "isCore": false,
+      "icon": "shield",
       "issuer": "한국소방안전원",
       "date": "2016.03.27",
       "serial": "2016-04-22-2-******"
