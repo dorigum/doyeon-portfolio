@@ -188,7 +188,7 @@ function App() {
             </div>
             <h1 className="hero-name">
               사용자와 현장의 흐름을 읽고,<br />
-              <span className="hero-headline-highlight">신뢰할 수 있는 시스템</span>으로 해결합니다
+              <span className="hero-headline-highlight">신뢰할 수 있는 시스템</span>으로 해결합니다.
             </h1>
             <p className="hero-subtitle">
               산업공학(IE)과 데이터 분석(ADsP, SQLD) 기반으로 사용자 여정, 업무 프로세스, 데이터 흐름을 입체적으로 연결합니다.
@@ -302,12 +302,12 @@ function App() {
                   <span className="metric-lbl">초기 번들 감축</span>
                 </div>
                 <div className="lens-metric-cell">
-                  <strong className="metric-val">0건</strong>
-                  <span className="metric-lbl">동시성 초과 방지</span>
+                  <strong className="metric-val">99.6%</strong>
+                  <span className="metric-lbl">이미지 용량 최적화</span>
                 </div>
                 <div className="lens-metric-cell">
-                  <strong className="metric-val">100%</strong>
-                  <span className="metric-lbl">화면 동기화 보장</span>
+                  <strong className="metric-val">5단계</strong>
+                  <span className="metric-lbl">AI Fallback 구축</span>
                 </div>
               </div>
             </aside>

@@ -446,8 +446,10 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  min-width: 44px;
+  width: 96px;
+  flex: 0 0 96px;
   padding-top: 2px;
+  text-align: center;
 }
 
 .layer-num {
@@ -1473,6 +1475,7 @@ footer {
   .lens-card-title { font-size: 1.15rem; }
   .lens-card-subtitle { font-size: 0.78rem; }
   .lens-layer-item { padding: 11px 12px; gap: 10px; }
+  .layer-marker { width: 86px; flex: 0 0 86px; }
   .layer-title { font-size: 0.86rem; }
   .layer-desc { font-size: 0.76rem; }
   .layer-chips span { font-size: 0.68rem; }

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Outer Ears with bold dark contour -->
+  <circle cx="18" cy="20" r="9" fill="#ffffff" stroke="#0f172a" stroke-width="4"/>
+  <circle cx="46" cy="20" r="9" fill="#ffffff" stroke="#0f172a" stroke-width="4"/>
+  <circle cx="18" cy="20" r="4" fill="#e2e8f0"/>
+  <circle cx="46" cy="20" r="4" fill="#e2e8f0"/>
+  
+  <!-- Bear Head Contour -->
+  <path d="M 12 36 C 12 23, 21 16, 32 16 C 43 16, 52 23, 52 36 C 52 48, 43 55, 32 55 C 21 55, 12 48, 12 36 Z" fill="#ffffff" stroke="#0f172a" stroke-width="4"/>
+  
+  <!-- Sleek Minimal Eyes -->
+  <ellipse cx="25" cy="33" rx="2.5" ry="3.5" fill="#0f172a"/>
+  <ellipse cx="39" cy="33" rx="2.5" ry="3.5" fill="#0f172a"/>
+  
+  <!-- Nose & Snout -->
+  <ellipse cx="32" cy="42" rx="7" ry="5" fill="#f8fafc" stroke="#0f172a" stroke-width="2"/>
+  <path d="M 29.5 40 C 30.5 39.5, 33.5 39.5, 34.5 40 C 35 41, 33 43, 32 43 C 31 43, 29 41, 29.5 40 Z" fill="#0f172a"/>
+</svg>
